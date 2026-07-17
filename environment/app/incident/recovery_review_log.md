@@ -297,6 +297,7 @@ Shift lead logged a routine recovery observation for dmz (west) during review wi
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0070 — vault lane
+> **Governance decision (2026-03-20 - #DB-5223)** Rosa: stability_pressure_score is (all_probe_ms//20)+(severity_probe_ms//15) with no alert-count term. *(Revised — see the 2026-05 governance review.)*
 Shift lead logged a routine recovery observation for vault (north) during review window 0070. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
@@ -305,6 +306,7 @@ Shift lead logged a routine recovery observation for fabric (central) during rev
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0072 — prod lane
+> **Governance decision (2026-03-22 - #DB-5225)** Rosa: defer_pressure_score is just defer_segment_count; the all-scope and severity-scope probe terms are dropped. *(Revised — see the 2026-05 governance review.)*
 Shift lead logged a routine recovery observation for prod (east) during review window 0072. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
@@ -314,6 +316,7 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 > **Recovery draft proposal (2026-02-23 - #DB-4835)** Rosa: risk carry between drift windows should accumulate without any cap or idle decay; long quiet periods keep full carry *(Superseded — reversed in the 2026-05 governance review; see the matching decision entry.)*
 
 ### Review entry 0074 — lab lane
+> **Governance decision (2026-03-24 - #DB-5229)** Rosa: trust_exposure_score is the single greatest retained path_score across reachable targets, not the sum of them. *(Revised — see the 2026-05 governance review.)*
 Shift lead logged a routine recovery observation for lab (north) during review window 0074. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
@@ -827,7 +830,7 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 ### Review entry 0199 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0199. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
-> **Governance decision (2026-05-04 - #DB-5307)** Priya: reopen layer: scope allowlist is ['all', 'p1', 'p2']; normalize env/scope/start/end, keep rows whose severity_scope is in scope_values, drop end<=start, compact overlap/touch intervals per (env,severity_scope). Rows with any other severity_scope are dropped entirely before compaction and checksums (supersedes #DB-4822). Matching scopes: {all,max_severity} for each window; if max_severity is p2 and (env,p2) has no compacted intervals, borrow (env,p1) as the severity scope fallback. Union: collect overlap segments from matching scopes then compact/union those segments to compute reopen_overlap_ms and reopen_segment_count. risk_adjusted_duration_ms = max(effective_duration_ms - (reopen_overlap_ms // 2), 0) — the //2 divisor is final and revises #DB-5214. stability_pressure_score: probe window [end_ms-180, end_ms+1) using reopen all + severity scopes; score=(all_probe_ms//30)+(severity_probe_ms//20)+max(alert_count-1,0).
+> **Governance decision (2026-05-04 - #DB-5307)** Priya: reopen layer: scope allowlist is ['all', 'p1', 'p2']; normalize env/scope/start/end, keep rows whose severity_scope is in scope_values, drop end<=start, compact overlap/touch intervals per (env,severity_scope). Rows with any other severity_scope are dropped entirely before compaction and checksums (supersedes #DB-4822). Matching scopes: {all,max_severity} for each window; if max_severity is p2 and (env,p2) has no compacted intervals, borrow (env,p1) as the severity scope fallback. Union: collect overlap segments from matching scopes then compact/union those segments to compute reopen_overlap_ms and reopen_segment_count. risk_adjusted_duration_ms = max(effective_duration_ms - (reopen_overlap_ms // 2), 0) — the //2 divisor is final and revises #DB-5214. stability_pressure_score (final, revising #DB-5223 which used the wrong divisors and dropped the alert term): probe window [end_ms-180, end_ms+1) using reopen all + severity scopes; score=(all_probe_ms//30)+(severity_probe_ms//20)+max(alert_count-1,0).
 
 ### Review entry 0200 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0200. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -997,7 +1000,7 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 ### Review entry 0241 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0241. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
-> **Governance decision (2026-05-05 - #DB-5310)** Marek: defer layer: scope allowlist ['all', 'p1', 'p2']; normalize env/scope/start/end, keep rows whose severity_scope is in scope_values, drop end<=start, compact overlap/touch intervals per (env,severity_scope). Matching scopes: {all,max_severity} for each window; if max_severity is p2 and (env,p2) has no compacted intervals, borrow (env,p1) as the severity scope fallback. Union: collect overlap segments from matching scopes then compact/union those segments to compute defer_overlap_ms and defer_segment_count. actionable_duration_ms = max(dispatchable_duration_ms - (defer_overlap_ms // 4), 0) — the //4 divisor is final and revises #DB-5221. defer_pressure_score: probe [end_ms-300,end_ms+1): (all_defer_probe_ms//40)+(severity_defer_probe_ms//28)+defer_segment_count.
+> **Governance decision (2026-05-05 - #DB-5310)** Marek: defer layer: scope allowlist ['all', 'p1', 'p2']; normalize env/scope/start/end, keep rows whose severity_scope is in scope_values, drop end<=start, compact overlap/touch intervals per (env,severity_scope). Matching scopes: {all,max_severity} for each window; if max_severity is p2 and (env,p2) has no compacted intervals, borrow (env,p1) as the severity scope fallback. Union: collect overlap segments from matching scopes then compact/union those segments to compute defer_overlap_ms and defer_segment_count. actionable_duration_ms = max(dispatchable_duration_ms - (defer_overlap_ms // 4), 0) — the //4 divisor is final and revises #DB-5221. defer_pressure_score (final, revising #DB-5225 which dropped the probe terms): probe [end_ms-300,end_ms+1): (all_defer_probe_ms//40)+(severity_defer_probe_ms//28)+defer_segment_count.
 
 ### Review entry 0242 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0242. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -1507,7 +1510,7 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 ### Review entry 0367 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0367. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
-> **Governance decision (2026-05-08 - #DB-5319)** Priya: trust retention: for each reachable target retain the path with greatest path_score; on equal score retain the lexicographically smallest full node sequence. trust_reachable_envs: all retained target names sorted ascending. trust_exposure_score: sum retained strongest path scores across trust_reachable_envs; use 0 when no target is reachable. trust_strongest_path: among retained target paths choose greatest path_score, then lexicographically smallest full node sequence; use [origin_env] when no target is reachable.
+> **Governance decision (2026-05-08 - #DB-5319)** Priya: trust retention: for each reachable target retain the path with greatest path_score; on equal score retain the lexicographically smallest full node sequence. trust_reachable_envs: all retained target names sorted ascending. trust_exposure_score: sum retained strongest path scores across trust_reachable_envs (final, revising #DB-5229 which kept only the single greatest path); use 0 when no target is reachable. trust_strongest_path: among retained target paths choose greatest path_score, then lexicographically smallest full node sequence; use [origin_env] when no target is reachable.
 
 ### Review entry 0368 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0368. Vendor ticket on replication-callback retries closed; delivery within contractual budget.

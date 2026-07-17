@@ -27,6 +27,7 @@ the binding entry; it does not restate the values.
 * Trust integration into `stability_index` and priority thresholds: **#DB-5320**
 * Priority tier rules: **#DB-5323**
 * Final queue ordering and its tie-break sequence: **#DB-5325**
+* Summary `max_*` score aggregation domains (admitted-queue-only vs all-windows): **#DB-5327**
 
 Checksum and digest serialization are fixed by `/app/docs/report_spec.json`, not here.
 
@@ -355,6 +356,7 @@ Shift lead logged a routine recovery observation for lab (north) during review w
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0075 — edge lane
+> **Governance decision (2026-03-26 - #DB-5231)** Rosa: summary score aggregation — the `max_*` score fields (`max_stability_pressure_score`, `max_volatility_index`, `max_defer_pressure_score`, `max_ledger_pressure_score`, `max_trust_exposure_score`, `max_stability_index`) are each the maximum of that field taken across **every merged drift window** in the run, whether or not the window is admitted to the responder queue; `max_carry_out_ms` spans every window the same way. *(Revised — see the 2026-05 governance review.)*
 Shift lead logged a routine recovery observation for edge (central) during review window 0075. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
@@ -1891,6 +1893,11 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for edge (central) during review window 0451. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 > **Governance decision (2026-05-10 - #DB-5325)** Yusuf: final queue ordering, applied strictly in sequence: priority rank critical>high>medium; then ledger_adjusted_actionable_ms desc; then actionable_duration_ms desc; then stability_index desc; then trust_exposure_score desc; then defer_pressure_score desc; then volatility_index desc; then dispatchable_duration_ms desc; then risk_adjusted_duration_ms desc; then freeze_segment_count desc; then alert_count desc; then env asc; then start_ms asc.
+
+### Review entry 0451 — core lane
+> **Governance decision (2026-05-10 - #DB-5327)** Yusuf: summary score aggregation domains (final, revising #DB-5231): the six `max_*` **score** fields — `max_stability_pressure_score`, `max_volatility_index`, `max_defer_pressure_score`, `max_ledger_pressure_score`, `max_trust_exposure_score`, and `max_stability_index` — are maxima over the **final admitted response_queue rows only**, using 0 when the queue is empty. Only `max_carry_out_ms` is taken over **every drift window** (admitted or not), 0 when there are no windows. The earlier all-windows form for the score fields in #DB-5231 counted attenuated windows that never reach a responder and is not the shipped behavior; this matches the `maximum_aggregation_domains` split in report_spec.json.
+Shift lead logged a routine recovery observation for core (east) during review window 0451. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0452 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0452. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.

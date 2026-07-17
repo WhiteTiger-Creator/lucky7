@@ -2,7 +2,33 @@
 Security operations — governance archive for the failed database replication-failover rollout (2026-Q1 through 2026-Q2).
 
 ## Executive Summary
-The drift reconciler has produced unsafe containment queues since the February recovery rollout. How the reconciler is *meant* to behave — canonicalization, deduplication, window merging, the four attenuation layers and their scope rules, probe scoring, the risk ledger, replica topology traversal, queue admission, priority and ordering — was settled incrementally by the recovery governance board, and those decisions live in the review entries below, not in any single summary. The February recovery draft proposals were revisited during the 2026-05 governance review and several were reversed; where a draft proposal and a later decision disagree, the later decision governs. `/app/docs/report_spec.json` is the output contract only: it fixes file paths, schemas, required fields, repair tokens, digest payloads and checksum serialization, not how the values are derived.
+The drift reconciler has produced unsafe containment queues since the February recovery rollout. How the reconciler is *meant* to behave — canonicalization, deduplication, window merging, the four attenuation layers and their scope rules, probe scoring, the risk ledger, replica topology traversal, queue admission, priority and ordering — was settled incrementally by the recovery governance board, and those decisions live in the review entries below. The **Governing Decisions Index** immediately after this summary lists, for each rule, the single final 2026-05 decision that governs it, so you can navigate straight to the binding entries rather than reconstruct them by scanning the whole archive. The February recovery draft proposals were revisited during the 2026-05 governance review and several were reversed; where a draft proposal and a later decision disagree, the later decision governs. `/app/docs/report_spec.json` is the output contract only: it fixes file paths, schemas, required fields, repair tokens, digest payloads and checksum serialization, not how the values are derived.
+
+## Governing Decisions Index (final — 2026-05 review)
+
+For each part of the reconciler, the single 2026-05 decision below is the one that
+governs. Each is marked "(final ...)" at its entry and supersedes any conflicting
+February draft or March interim. Read the referenced decision in full for the exact
+formula, divisors, probe windows, scopes, and tie-breaks — this index only points to
+the binding entry; it does not restate the values.
+
+* Alert canonicalization (env/severity normalization, end_ms coercion, muted parsing): **#DB-5301**
+* Deduplication by alert_id and its tie-break chain: **#DB-5302**
+* Drift-window merging (stitch threshold, muted exclusion): **#DB-5304**
+* Freeze attenuation layer: **#DB-5305**
+* Reopen layer, `risk_adjusted_duration_ms`, and `stability_pressure_score`: **#DB-5307**
+* Rotation layer, `dispatchable_duration_ms`, and `volatility_index`: **#DB-5308**
+* Defer layer, `actionable_duration_ms`, and `defer_pressure_score`: **#DB-5310**
+* Risk ledger (idle-gap decay, carry-out cap, `ledger_adjusted_actionable_ms`): **#DB-5313**
+* Ledger scoring (`ledger_pressure_score`) and the base `stability_index`: **#DB-5314**
+* Replica topology edges (normalization, weight bounds, dedup): **#DB-5316**
+* Trust traversal (bounded simple directed paths, path scoring): **#DB-5317**
+* Trust retention, `trust_reachable_envs`, `trust_exposure_score`, `trust_strongest_path`: **#DB-5319**
+* Trust integration into `stability_index` and priority thresholds: **#DB-5320**
+* Priority tier rules: **#DB-5323**
+* Final queue ordering and its tie-break sequence: **#DB-5325**
+
+Checksum and digest serialization are fixed by `/app/docs/report_spec.json`, not here.
 
 ## February Recovery Drafts (2026-02 — partly reversed)
 The initial rollout circulated compile-behavior proposals through #DB tickets in the 4800 range. Several did not survive governance review. They are archived in place below and marked superseded; do not implement them as written.

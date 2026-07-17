@@ -44,19 +44,19 @@
       "max_volatility_index": 7,
       "max_defer_pressure_score": 1,
       "max_ledger_pressure_score": 4,
-      "max_trust_exposure_score": 23,
+      "max_trust_exposure_score": 16,
       "max_carry_out_ms": 500,
-      "max_stability_index": 23,
+      "max_stability_index": 20,
       "canonical_alert_checksum": "420d15568d5ae7c49607b4256d467f9beb643e4c9d49a79f04a51fd49edc4372",
-      "queue_hash_checksum": "557d71df427bab7c0bf59d3c432162cfc5995b3c6aedea1a0ca6235b1ce04814",
+      "queue_hash_checksum": "a74e5608d11d4396f1d05122b55c6e231e5b8986a328f0bcdcbc3f45bf147948",
       "freeze_compaction_checksum": "7b16a0bd7ee7fa2a58b4a4b732279823cedfac43cc107b0b6277b3f4f1ac9b9e",
       "reopen_compaction_checksum": "1e7228f02ac57a4d1e11b88b4480c371dec15365071dac51c49c034de5a30296",
       "rotation_compaction_checksum": "7dc843f0e00f77f94b6711956ebd5cd6dee03100d63dc724fc3a598f1a0c50d0",
       "defer_compaction_checksum": "13ff4fcd8c1968ffc0606aed0862818940259d663fb4bfbee6f595b8b2e3424e",
       "trust_edge_checksum": "ed7c2cae8f3ac224b0d8ac70f03afb20c2f275f3f1cd9b763bc4d07af20a63f9",
-      "window_digest_checksum": "e1b5eea346ed027333dce50ea6cedff7f540e199a28dc590ece2f95c8fad5366",
+      "window_digest_checksum": "d53b763215988facf5a897cadd578f8643d04cac5de115d49201a9944b3685c0",
       "ledger_checksum": "4b91ec495f0b4df592dfd10d6a67bd2d1ad91b0ce66dcf044ada5fc232d2440b",
-      "trust_path_digest_checksum": "7bf16b0aeb39a93e8e350adf51aa2c180c73d4b24ecbb59d284d936620ae53bc"
+      "trust_path_digest_checksum": "e508c34abb4266cf738d8b0228b016ff51a534ffdc963a4a1dc8f01c51e83a20"
     },
     "windows": {
       "dmz": [
@@ -90,13 +90,13 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 23,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "dmz",
             "edge",
             "prod"
           ],
-          "trust_path_digest": "22d16a2b1e58"
+          "trust_path_digest": "953232883036"
         },
         {
           "start_ms": 2010733005000,
@@ -128,13 +128,13 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 23,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "dmz",
             "edge",
             "prod"
           ],
-          "trust_path_digest": "22d16a2b1e58"
+          "trust_path_digest": "953232883036"
         },
         {
           "start_ms": 2010733006200,
@@ -166,13 +166,13 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 23,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "dmz",
             "edge",
             "prod"
           ],
-          "trust_path_digest": "22d16a2b1e58"
+          "trust_path_digest": "953232883036"
         },
         {
           "start_ms": 2010733008600,
@@ -205,13 +205,13 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 23,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "dmz",
             "edge",
             "prod"
           ],
-          "trust_path_digest": "22d16a2b1e58"
+          "trust_path_digest": "953232883036"
         }
       ],
       "edge": [
@@ -245,14 +245,14 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 26,
+          "trust_exposure_score": 15,
           "trust_strongest_path": [
             "edge",
             "prod",
             "dmz",
             "vault"
           ],
-          "trust_path_digest": "aaa3a2d4cbff"
+          "trust_path_digest": "4139a3afcf26"
         },
         {
           "start_ms": 2010733003000,
@@ -284,14 +284,14 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 26,
+          "trust_exposure_score": 15,
           "trust_strongest_path": [
             "edge",
             "prod",
             "dmz",
             "vault"
           ],
-          "trust_path_digest": "aaa3a2d4cbff"
+          "trust_path_digest": "4139a3afcf26"
         },
         {
           "start_ms": 2010733005400,
@@ -323,14 +323,14 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 26,
+          "trust_exposure_score": 15,
           "trust_strongest_path": [
             "edge",
             "prod",
             "dmz",
             "vault"
           ],
-          "trust_path_digest": "aaa3a2d4cbff"
+          "trust_path_digest": "4139a3afcf26"
         },
         {
           "start_ms": 2010733008800,
@@ -362,14 +362,14 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 26,
+          "trust_exposure_score": 15,
           "trust_strongest_path": [
             "edge",
             "prod",
             "dmz",
             "vault"
           ],
-          "trust_path_digest": "aaa3a2d4cbff"
+          "trust_path_digest": "4139a3afcf26"
         }
       ],
       "prod": [
@@ -403,14 +403,14 @@
             "edge",
             "vault"
           ],
-          "trust_exposure_score": 29,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "prod",
             "dmz",
             "edge",
             "vault"
           ],
-          "trust_path_digest": "05910932ba95"
+          "trust_path_digest": "9002994ce59a"
         },
         {
           "start_ms": 2010733002400,
@@ -442,14 +442,14 @@
             "edge",
             "vault"
           ],
-          "trust_exposure_score": 29,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "prod",
             "dmz",
             "edge",
             "vault"
           ],
-          "trust_path_digest": "05910932ba95"
+          "trust_path_digest": "9002994ce59a"
         },
         {
           "start_ms": 2010733004500,
@@ -481,14 +481,14 @@
             "edge",
             "vault"
           ],
-          "trust_exposure_score": 29,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "prod",
             "dmz",
             "edge",
             "vault"
           ],
-          "trust_path_digest": "05910932ba95"
+          "trust_path_digest": "9002994ce59a"
         },
         {
           "start_ms": 2010733006800,
@@ -520,14 +520,14 @@
             "edge",
             "vault"
           ],
-          "trust_exposure_score": 29,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "prod",
             "dmz",
             "edge",
             "vault"
           ],
-          "trust_path_digest": "05910932ba95"
+          "trust_path_digest": "9002994ce59a"
         },
         {
           "start_ms": 2010733007300,
@@ -559,14 +559,14 @@
             "edge",
             "vault"
           ],
-          "trust_exposure_score": 29,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "prod",
             "dmz",
             "edge",
             "vault"
           ],
-          "trust_path_digest": "05910932ba95"
+          "trust_path_digest": "9002994ce59a"
         },
         {
           "start_ms": 2010733009200,
@@ -598,14 +598,14 @@
             "edge",
             "vault"
           ],
-          "trust_exposure_score": 29,
+          "trust_exposure_score": 16,
           "trust_strongest_path": [
             "prod",
             "dmz",
             "edge",
             "vault"
           ],
-          "trust_path_digest": "05910932ba95"
+          "trust_path_digest": "9002994ce59a"
         }
       ]
     },
@@ -637,13 +637,13 @@
           "prod",
           "vault"
         ],
-        "trust_exposure_score": 23,
+        "trust_exposure_score": 16,
         "trust_strongest_path": [
           "dmz",
           "edge",
           "prod"
         ],
-        "trust_path_digest": "22d16a2b1e58",
+        "trust_path_digest": "953232883036",
         "alert_count": 2,
         "source_alert_ids": [
           "r13",
@@ -654,10 +654,10 @@
         "volatility_index": 7,
         "defer_pressure_score": 1,
         "ledger_pressure_score": 4,
-        "stability_index": 23,
+        "stability_index": 20,
         "priority": "critical",
-        "queue_hash": "d2b0248b579f",
-        "window_digest": "28dd0fc029"
+        "queue_hash": "569ecfd41896",
+        "window_digest": "de1500aa04"
       }
     ]
   },
@@ -695,19 +695,19 @@
       "max_volatility_index": 1,
       "max_defer_pressure_score": 0,
       "max_ledger_pressure_score": 5,
-      "max_trust_exposure_score": 26,
+      "max_trust_exposure_score": 15,
       "max_carry_out_ms": 415,
-      "max_stability_index": 16,
+      "max_stability_index": 10,
       "canonical_alert_checksum": "30990d31c85af0a4e9f6d685b5cbf12931579d7a641033c3f92ca878339e9710",
-      "queue_hash_checksum": "d00c01887f6348e426021a7b84d1606f517e12050e2a7a1d8b7f74306ad85cf8",
+      "queue_hash_checksum": "dfa78f64d52f2fc795e6c22444202ac4205cce2ef9206707a8c6b1fd09fd04a0",
       "freeze_compaction_checksum": "7b16a0bd7ee7fa2a58b4a4b732279823cedfac43cc107b0b6277b3f4f1ac9b9e",
       "reopen_compaction_checksum": "1e7228f02ac57a4d1e11b88b4480c371dec15365071dac51c49c034de5a30296",
       "rotation_compaction_checksum": "7dc843f0e00f77f94b6711956ebd5cd6dee03100d63dc724fc3a598f1a0c50d0",
       "defer_compaction_checksum": "13ff4fcd8c1968ffc0606aed0862818940259d663fb4bfbee6f595b8b2e3424e",
       "trust_edge_checksum": "ed7c2cae8f3ac224b0d8ac70f03afb20c2f275f3f1cd9b763bc4d07af20a63f9",
-      "window_digest_checksum": "5f8caed566aad2fd0004da7fe50158c40857c66fa68a685adee0a2b36a35d242",
+      "window_digest_checksum": "02081d85c8f78dec1bfe0eb00ab8d83a04c33bc0226c4386800130cfa3e3f8cf",
       "ledger_checksum": "03650c688c10aa5a21d7a5cc2408a4f9f20e5e20f0c8bd07caeeaf95d0d7dd74",
-      "trust_path_digest_checksum": "98aa77d993025b70542682cb65144ea0712bdba0f7d5056c36efbd046ff70ae3"
+      "trust_path_digest_checksum": "02ddf5910a43039457a1b4e9b014ece9457493e206fa1abe4303c4aaf211d3ba"
     },
     "windows": {
       "edge": [
@@ -741,14 +741,14 @@
             "prod",
             "vault"
           ],
-          "trust_exposure_score": 26,
+          "trust_exposure_score": 15,
           "trust_strongest_path": [
             "edge",
             "prod",
             "dmz",
             "vault"
           ],
-          "trust_path_digest": "aaa3a2d4cbff"
+          "trust_path_digest": "4139a3afcf26"
         }
       ],
       "lab": [
@@ -890,14 +890,14 @@
           "prod",
           "vault"
         ],
-        "trust_exposure_score": 26,
+        "trust_exposure_score": 15,
         "trust_strongest_path": [
           "edge",
           "prod",
           "dmz",
           "vault"
         ],
-        "trust_path_digest": "aaa3a2d4cbff",
+        "trust_path_digest": "4139a3afcf26",
         "alert_count": 1,
         "source_alert_ids": [
           "r4"
@@ -907,10 +907,10 @@
         "volatility_index": 0,
         "defer_pressure_score": 0,
         "ledger_pressure_score": 3,
-        "stability_index": 16,
-        "priority": "critical",
-        "queue_hash": "c0ea9f3e934d",
-        "window_digest": "74a591ca01"
+        "stability_index": 10,
+        "priority": "high",
+        "queue_hash": "6cead4357758",
+        "window_digest": "46096b9031"
       }
     ]
   }

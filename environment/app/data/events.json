@@ -1,200 +1,371 @@
 [
   {
-    "alert_id": "r01",
+    "alert_id": "p1001",
     "start_ms": 2010733001000,
-    "end_ms": 2010733001300,
+    "end_ms": 2010733001620,
     "severity": "p1",
     "env": "prod",
+    "signature": "failover promotion drift",
+    "muted": false
+  },
+  {
+    "alert_id": "p1002",
+    "start_ms": 2010733001650,
+    "end_ms": 2010733001850,
+    "severity": "p2",
+    "env": "PROD",
+    "signature": "checkpoint gap widening",
+    "muted": false
+  },
+  {
+    "alert_id": "p1003",
+    "start_ms": 2010733002200,
+    "end_ms": 2010733002760,
+    "severity": "p2",
+    "env": "Prod ",
+    "signature": "standby apply delay",
+    "muted": false
+  },
+  {
+    "alert_id": "p1004",
+    "start_ms": 2010733003400,
+    "end_ms": 2010733004100,
+    "severity": "p1",
+    "env": "prod",
+    "signature": "split-brain risk detected",
+    "muted": false
+  },
+  {
+    "alert_id": "p1005",
+    "start_ms": 2010733004130,
+    "end_ms": 2010733004290,
+    "severity": "p3",
+    "env": "PROD",
+    "signature": "replication slot orphan",
+    "muted": false
+  },
+  {
+    "alert_id": "p1006",
+    "start_ms": 2010733005200,
+    "end_ms": 2010733005740,
+    "severity": "p1",
+    "env": "Prod ",
+    "signature": "vacuum backlog growth",
+    "muted": false
+  },
+  {
+    "alert_id": "d1007",
+    "start_ms": 2010733201000,
+    "end_ms": 2010733201700,
+    "severity": "p1",
+    "env": "dmz",
+    "signature": "sync commit timeout",
+    "muted": false
+  },
+  {
+    "alert_id": "d1008",
+    "start_ms": 2010733202000,
+    "end_ms": 2010733202520,
+    "severity": "p2",
+    "env": "DMZ",
     "signature": "replica lag spike",
     "muted": false
   },
   {
-    "alert_id": "r02",
-    "start_ms": 2010733001200,
+    "alert_id": "d1009",
+    "start_ms": 2010733202550,
+    "end_ms": 2010733202730,
+    "severity": "p2",
+    "env": "Dmz ",
+    "signature": "wal replay stall",
+    "muted": false
+  },
+  {
+    "alert_id": "d1010",
+    "start_ms": 2010733203200,
+    "end_ms": 2010733203840,
+    "severity": "p1",
+    "env": "dmz",
+    "signature": "failover promotion drift",
+    "muted": false
+  },
+  {
+    "alert_id": "d1011",
+    "start_ms": 2010733204200,
+    "end_ms": 2010733204680,
+    "severity": "p2",
+    "env": "DMZ",
+    "signature": "checkpoint gap widening",
+    "muted": false
+  },
+  {
+    "alert_id": "e1012",
+    "start_ms": 2010733401000,
+    "end_ms": 2010733401560,
+    "severity": "p2",
+    "env": "edge",
+    "signature": "standby apply delay",
+    "muted": false
+  },
+  {
+    "alert_id": "e1013",
+    "start_ms": 2010733401590,
+    "end_ms": 2010733401830,
+    "severity": "p1",
+    "env": "EDGE ",
+    "signature": "split-brain risk detected",
+    "muted": false
+  },
+  {
+    "alert_id": "e1014",
+    "start_ms": 2010733402400,
+    "end_ms": 2010733403000,
+    "severity": "p1",
+    "env": "edge",
+    "signature": "replication slot orphan",
+    "muted": false
+  },
+  {
+    "alert_id": "e1015",
+    "start_ms": 2010733403600,
+    "end_ms": 2010733404120,
+    "severity": "p2",
+    "env": "EDGE ",
+    "signature": "vacuum backlog growth",
+    "muted": false
+  },
+  {
+    "alert_id": "v1016",
+    "start_ms": 2010733601000,
+    "end_ms": 2010733601760,
+    "severity": "p1",
+    "env": "vault",
+    "signature": "sync commit timeout",
+    "muted": false
+  },
+  {
+    "alert_id": "v1017",
+    "start_ms": 2010733601790,
+    "end_ms": 2010733602010,
+    "severity": "p2",
+    "env": "Vault ",
+    "signature": "replica lag spike",
+    "muted": false
+  },
+  {
+    "alert_id": "v1018",
+    "start_ms": 2010733602600,
+    "end_ms": 2010733603140,
+    "severity": "p2",
+    "env": "vault",
+    "signature": "wal replay stall",
+    "muted": false
+  },
+  {
+    "alert_id": "v1019",
+    "start_ms": 2010733603800,
+    "end_ms": 2010733604420,
+    "severity": "p1",
+    "env": "Vault ",
+    "signature": "failover promotion drift",
+    "muted": false
+  },
+  {
+    "alert_id": "c1020",
+    "start_ms": 2010733801000,
+    "end_ms": 2010733801600,
+    "severity": "p1",
+    "env": "core",
+    "signature": "checkpoint gap widening",
+    "muted": false
+  },
+  {
+    "alert_id": "c1021",
+    "start_ms": 2010733801900,
+    "end_ms": 2010733802460,
+    "severity": "p2",
+    "env": "CORE ",
+    "signature": "standby apply delay",
+    "muted": false
+  },
+  {
+    "alert_id": "c1022",
+    "start_ms": 2010733802800,
+    "end_ms": 2010733803320,
+    "severity": "p1",
+    "env": "core",
+    "signature": "split-brain risk detected",
+    "muted": false
+  },
+  {
+    "alert_id": "c1023",
+    "start_ms": 2010733803700,
+    "end_ms": 2010733804180,
+    "severity": "p2",
+    "env": "CORE ",
+    "signature": "replication slot orphan",
+    "muted": false
+  },
+  {
+    "alert_id": "d1024",
+    "start_ms": 2010734001000,
+    "end_ms": 2010734001640,
+    "severity": "p1",
+    "env": "dns",
+    "signature": "vacuum backlog growth",
+    "muted": false
+  },
+  {
+    "alert_id": "d1025",
+    "start_ms": 2010734002300,
+    "end_ms": 2010734003000,
+    "severity": "p2",
+    "env": "DNS ",
+    "signature": "sync commit timeout",
+    "muted": false
+  },
+  {
+    "alert_id": "d1026",
+    "start_ms": 2010734003030,
+    "end_ms": 2010734003230,
+    "severity": "p1",
+    "env": "dns",
+    "signature": "replica lag spike",
+    "muted": false
+  },
+  {
+    "alert_id": "d1027",
+    "start_ms": 2010734003900,
+    "end_ms": 2010734004460,
+    "severity": "p1",
+    "env": "DNS ",
+    "signature": "wal replay stall",
+    "muted": false
+  },
+  {
+    "alert_id": "z1028",
+    "start_ms": 2010734201000,
+    "end_ms": 2010734201580,
+    "severity": "p2",
+    "env": "zone",
+    "signature": "failover promotion drift",
+    "muted": false
+  },
+  {
+    "alert_id": "z1029",
+    "start_ms": 2010734202100,
+    "end_ms": 2010734202720,
+    "severity": "p1",
+    "env": "ZONE ",
+    "signature": "checkpoint gap widening",
+    "muted": false
+  },
+  {
+    "alert_id": "z1030",
+    "start_ms": 2010734203300,
+    "end_ms": 2010734203800,
+    "severity": "p2",
+    "env": "zone",
+    "signature": "standby apply delay",
+    "muted": false
+  },
+  {
+    "alert_id": "m1031",
+    "start_ms": 2010734401000,
+    "end_ms": 2010734401700,
+    "severity": "p1",
+    "env": "mesh",
+    "signature": "split-brain risk detected",
+    "muted": false
+  },
+  {
+    "alert_id": "m1032",
+    "start_ms": 2010734401730,
+    "end_ms": 2010734401990,
+    "severity": "p2",
+    "env": "MESH ",
+    "signature": "replication slot orphan",
+    "muted": false
+  },
+  {
+    "alert_id": "m1033",
+    "start_ms": 2010734402400,
+    "end_ms": 2010734402940,
+    "severity": "p2",
+    "env": "mesh",
+    "signature": "vacuum backlog growth",
+    "muted": false
+  },
+  {
+    "alert_id": "m1",
+    "start_ms": 2010733001500,
     "end_ms": 2010733001800,
-    "severity": "p3",
-    "env": "edge",
-    "signature": "wal gap detected",
-    "muted": false
-  },
-  {
-    "alert_id": "r02",
-    "start_ms": 2010733001200,
-    "end_ms": 2010733002200,
-    "severity": "P2",
-    "env": "edge",
-    "signature": " wal gap detected replay ",
-    "muted": false
-  },
-  {
-    "alert_id": "r03",
-    "start_ms": 2010733002400,
-    "end_ms": 2010733002600,
-    "severity": "p4",
-    "env": "prod",
-    "signature": "checkpoint recovered",
-    "muted": false
-  },
-  {
-    "alert_id": "r04",
-    "start_ms": 2010733003000,
-    "end_ms": 2010733003300,
-    "severity": "p3",
-    "env": "edge",
-    "signature": "standby late apply",
-    "muted": false
-  },
-  {
-    "alert_id": "r05",
-    "start_ms": 2010733003400,
-    "end_ms": 2010733003900,
-    "severity": "p3",
-    "env": "dmz",
-    "signature": "manual analyst note",
-    "muted": false
-  },
-  {
-    "alert_id": "r06",
-    "start_ms": 2010733004500,
-    "end_ms": 2010733004900,
-    "severity": "p2",
-    "env": "prod",
-    "signature": "backup checksum mismatch",
-    "muted": false
-  },
-  {
-    "alert_id": "r07",
-    "start_ms": 2010733005000,
-    "end_ms": 2010733005600,
-    "severity": "P1",
-    "env": "dmz",
-    "signature": "promotion rollback",
-    "muted": false
-  },
-  {
-    "alert_id": "r08",
-    "start_ms": 2010733005400,
-    "end_ms": 2010733005800,
-    "severity": "P2",
-    "env": "edge",
-    "signature": "temporary replication drift burst",
-    "muted": false
-  },
-  {
-    "alert_id": "r08",
-    "start_ms": 2010733005400,
-    "end_ms": 2010733005600,
-    "severity": "p3",
-    "env": "edge",
-    "signature": "recovered after resync",
-    "muted": false
-  },
-  {
-    "alert_id": "r09",
-    "start_ms": 2010733006200,
-    "end_ms": 2010733006800,
-    "severity": "p2",
-    "env": "dmz",
-    "signature": "duplicate xlog replay",
-    "muted": false
-  },
-  {
-    "alert_id": "r10",
-    "start_ms": 2010733006800,
-    "end_ms": 2010733006900,
     "severity": "p1",
     "env": "prod",
-    "signature": "stale replication slot map",
-    "muted": false
-  },
-  {
-    "alert_id": "r10",
-    "start_ms": 2010733006800,
-    "end_ms": 2010733007000,
-    "severity": "p1",
-    "env": "prod",
-    "signature": "stale replication slot map replay",
-    "muted": false
-  },
-  {
-    "alert_id": "r11",
-    "start_ms": 2010733007300,
-    "end_ms": 2010733007350,
-    "severity": "p4",
-    "env": "prod",
-    "signature": "diagnostic trace",
-    "muted": false
-  },
-  {
-    "alert_id": "r12",
-    "start_ms": 2010733007800,
-    "end_ms": 2010733008400,
-    "severity": "p1",
-    "env": "edge",
-    "signature": "waived rehearsal alert",
+    "signature": "muted noise",
     "muted": true
   },
   {
-    "alert_id": "r13",
-    "start_ms": 2010733008600,
-    "end_ms": 2010733009200,
+    "alert_id": "m2",
+    "start_ms": 2010733200500,
+    "end_ms": 2010733200800,
     "severity": "p2",
     "env": "dmz",
-    "signature": "split-brain ratio",
-    "muted": false
-  },
-  {
-    "alert_id": "r14",
-    "start_ms": 2010733008800,
-    "end_ms": 2010733009000,
-    "severity": "p3",
-    "env": "edge",
-    "signature": "batch resync complete",
-    "muted": false
-  },
-  {
-    "alert_id": "r15",
-    "start_ms": 2010733009000,
-    "end_ms": 2010733009800,
-    "severity": "p1",
-    "env": "dmz",
-    "signature": "terminal promotion rollback",
-    "muted": false
-  },
-  {
-    "alert_id": "r16",
-    "start_ms": 2010733009100,
-    "end_ms": 2010733009500,
-    "severity": "p2",
-    "env": "dmz",
-    "signature": "zzz candidate",
+    "signature": "muted noise",
     "muted": "yes"
   },
   {
-    "alert_id": "r16",
-    "start_ms": 2010733009100,
-    "end_ms": 2010733009500,
-    "severity": "p2",
-    "env": "dmz",
-    "signature": "aaa candidate",
+    "alert_id": "u1",
+    "start_ms": 2010733400500,
+    "end_ms": 2010733400900,
+    "severity": "sev9",
+    "env": "edge",
+    "signature": "unknown sev",
     "muted": false
   },
   {
-    "alert_id": "r17",
-    "start_ms": 2010733009200,
-    "end_ms": 2010733009300,
-    "severity": "p2",
-    "env": "prod",
-    "signature": "alpha signature",
+    "alert_id": "u2",
+    "start_ms": 2010733600500,
+    "end_ms": 2010733600900,
+    "severity": "P1",
+    "env": "vault",
+    "signature": "casing sev",
     "muted": false
   },
   {
-    "alert_id": "r17",
-    "start_ms": 2010733009200,
-    "end_ms": 2010733009300,
+    "alert_id": "D1",
+    "start_ms": 2010733800000,
+    "end_ms": 2010733800400,
     "severity": "p2",
-    "env": "prod",
-    "signature": "zeta signature",
+    "env": "core",
+    "signature": "dup a",
+    "muted": false
+  },
+  {
+    "alert_id": "D1",
+    "start_ms": 2010733800000,
+    "end_ms": 2010733800600,
+    "severity": "p2",
+    "env": "core",
+    "signature": "dup b",
+    "muted": false
+  },
+  {
+    "alert_id": "D2",
+    "start_ms": 2010733810000,
+    "end_ms": 2010733810500,
+    "severity": "p2",
+    "env": "dns",
+    "signature": "dup c",
+    "muted": false
+  },
+  {
+    "alert_id": "D2",
+    "start_ms": 2010733810000,
+    "end_ms": 2010733810500,
+    "severity": "p1",
+    "env": "dns",
+    "signature": "dup d",
     "muted": false
   }
 ]

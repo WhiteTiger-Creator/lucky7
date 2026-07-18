@@ -2,7 +2,7 @@
   {
     "alert_id": "p5001",
     "start_ms": 2010733001000,
-    "end_ms": 2010733001680,
+    "end_ms": 2010733001350,
     "severity": "p1",
     "env": "prod",
     "signature": "replication slot orphan",
@@ -11,7 +11,7 @@
   {
     "alert_id": "p5002",
     "start_ms": 2010733002100,
-    "end_ms": 2010733002640,
+    "end_ms": 2010733002376,
     "severity": "p2",
     "env": "PROD",
     "signature": "vacuum backlog growth",
@@ -20,7 +20,7 @@
   {
     "alert_id": "p5003",
     "start_ms": 2010733003300,
-    "end_ms": 2010733003900,
+    "end_ms": 2010733003607,
     "severity": "p1",
     "env": "prod",
     "signature": "sync commit timeout",
@@ -29,7 +29,7 @@
   {
     "alert_id": "d5004",
     "start_ms": 2010733201000,
-    "end_ms": 2010733201560,
+    "end_ms": 2010733201285,
     "severity": "p2",
     "env": "dmz",
     "signature": "replica lag spike",
@@ -37,8 +37,8 @@
   },
   {
     "alert_id": "d5005",
-    "start_ms": 2010733201590,
-    "end_ms": 2010733201830,
+    "start_ms": 2010733201315,
+    "end_ms": 2010733201439,
     "severity": "p1",
     "env": "Dmz ",
     "signature": "wal replay stall",
@@ -47,7 +47,7 @@
   {
     "alert_id": "d5006",
     "start_ms": 2010733202400,
-    "end_ms": 2010733203040,
+    "end_ms": 2010733202731,
     "severity": "p1",
     "env": "dmz",
     "signature": "failover promotion drift",
@@ -56,7 +56,7 @@
   {
     "alert_id": "c5007",
     "start_ms": 2010733401000,
-    "end_ms": 2010733401600,
+    "end_ms": 2010733401310,
     "severity": "p1",
     "env": "core",
     "signature": "checkpoint gap widening",
@@ -65,7 +65,7 @@
   {
     "alert_id": "c5008",
     "start_ms": 2010733401900,
-    "end_ms": 2010733402420,
+    "end_ms": 2010733402167,
     "severity": "p2",
     "env": "CORE ",
     "signature": "standby apply delay",
@@ -74,7 +74,7 @@
   {
     "alert_id": "c5009",
     "start_ms": 2010733402800,
-    "end_ms": 2010733403360,
+    "end_ms": 2010733403087,
     "severity": "p1",
     "env": "core",
     "signature": "split-brain risk detected",
@@ -83,7 +83,7 @@
   {
     "alert_id": "v5010",
     "start_ms": 2010733601000,
-    "end_ms": 2010733601720,
+    "end_ms": 2010733601369,
     "severity": "p1",
     "env": "vault",
     "signature": "replication slot orphan",
@@ -92,7 +92,7 @@
   {
     "alert_id": "v5011",
     "start_ms": 2010733602600,
-    "end_ms": 2010733603100,
+    "end_ms": 2010733602854,
     "severity": "p2",
     "env": "vault",
     "signature": "vacuum backlog growth",

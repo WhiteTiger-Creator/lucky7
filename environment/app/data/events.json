@@ -2,7 +2,7 @@
   {
     "alert_id": "p1001",
     "start_ms": 2010733001000,
-    "end_ms": 2010733001620,
+    "end_ms": 2010733001322,
     "severity": "p1",
     "env": "prod",
     "signature": "failover promotion drift",
@@ -10,8 +10,8 @@
   },
   {
     "alert_id": "p1002",
-    "start_ms": 2010733001650,
-    "end_ms": 2010733001850,
+    "start_ms": 2010733001352,
+    "end_ms": 2010733001455,
     "severity": "p2",
     "env": "PROD",
     "signature": "checkpoint gap widening",
@@ -20,7 +20,7 @@
   {
     "alert_id": "p1003",
     "start_ms": 2010733002200,
-    "end_ms": 2010733002760,
+    "end_ms": 2010733002489,
     "severity": "p2",
     "env": "Prod ",
     "signature": "standby apply delay",
@@ -29,7 +29,7 @@
   {
     "alert_id": "p1004",
     "start_ms": 2010733003400,
-    "end_ms": 2010733004100,
+    "end_ms": 2010733003761,
     "severity": "p1",
     "env": "prod",
     "signature": "split-brain risk detected",
@@ -37,8 +37,8 @@
   },
   {
     "alert_id": "p1005",
-    "start_ms": 2010733004130,
-    "end_ms": 2010733004290,
+    "start_ms": 2010733003791,
+    "end_ms": 2010733003870,
     "severity": "p3",
     "env": "PROD",
     "signature": "replication slot orphan",
@@ -47,7 +47,7 @@
   {
     "alert_id": "p1006",
     "start_ms": 2010733005200,
-    "end_ms": 2010733005740,
+    "end_ms": 2010733005475,
     "severity": "p1",
     "env": "Prod ",
     "signature": "vacuum backlog growth",
@@ -56,7 +56,7 @@
   {
     "alert_id": "d1007",
     "start_ms": 2010733201000,
-    "end_ms": 2010733201700,
+    "end_ms": 2010733201358,
     "severity": "p1",
     "env": "dmz",
     "signature": "sync commit timeout",
@@ -65,7 +65,7 @@
   {
     "alert_id": "d1008",
     "start_ms": 2010733202000,
-    "end_ms": 2010733202520,
+    "end_ms": 2010733202270,
     "severity": "p2",
     "env": "DMZ",
     "signature": "replica lag spike",
@@ -73,8 +73,8 @@
   },
   {
     "alert_id": "d1009",
-    "start_ms": 2010733202550,
-    "end_ms": 2010733202730,
+    "start_ms": 2010733202300,
+    "end_ms": 2010733202392,
     "severity": "p2",
     "env": "Dmz ",
     "signature": "wal replay stall",
@@ -83,7 +83,7 @@
   {
     "alert_id": "d1010",
     "start_ms": 2010733203200,
-    "end_ms": 2010733203840,
+    "end_ms": 2010733203530,
     "severity": "p1",
     "env": "dmz",
     "signature": "failover promotion drift",
@@ -92,7 +92,7 @@
   {
     "alert_id": "d1011",
     "start_ms": 2010733204200,
-    "end_ms": 2010733204680,
+    "end_ms": 2010733204446,
     "severity": "p2",
     "env": "DMZ",
     "signature": "checkpoint gap widening",
@@ -101,7 +101,7 @@
   {
     "alert_id": "e1012",
     "start_ms": 2010733401000,
-    "end_ms": 2010733401560,
+    "end_ms": 2010733401287,
     "severity": "p2",
     "env": "edge",
     "signature": "standby apply delay",
@@ -109,8 +109,8 @@
   },
   {
     "alert_id": "e1013",
-    "start_ms": 2010733401590,
-    "end_ms": 2010733401830,
+    "start_ms": 2010733401317,
+    "end_ms": 2010733401436,
     "severity": "p1",
     "env": "EDGE ",
     "signature": "split-brain risk detected",
@@ -119,7 +119,7 @@
   {
     "alert_id": "e1014",
     "start_ms": 2010733402400,
-    "end_ms": 2010733403000,
+    "end_ms": 2010733402706,
     "severity": "p1",
     "env": "edge",
     "signature": "replication slot orphan",
@@ -128,7 +128,7 @@
   {
     "alert_id": "e1015",
     "start_ms": 2010733403600,
-    "end_ms": 2010733404120,
+    "end_ms": 2010733403870,
     "severity": "p2",
     "env": "EDGE ",
     "signature": "vacuum backlog growth",
@@ -137,7 +137,7 @@
   {
     "alert_id": "v1016",
     "start_ms": 2010733601000,
-    "end_ms": 2010733601760,
+    "end_ms": 2010733601394,
     "severity": "p1",
     "env": "vault",
     "signature": "sync commit timeout",
@@ -145,8 +145,8 @@
   },
   {
     "alert_id": "v1017",
-    "start_ms": 2010733601790,
-    "end_ms": 2010733602010,
+    "start_ms": 2010733601424,
+    "end_ms": 2010733601536,
     "severity": "p2",
     "env": "Vault ",
     "signature": "replica lag spike",
@@ -155,7 +155,7 @@
   {
     "alert_id": "v1018",
     "start_ms": 2010733602600,
-    "end_ms": 2010733603140,
+    "end_ms": 2010733602877,
     "severity": "p2",
     "env": "vault",
     "signature": "wal replay stall",
@@ -164,7 +164,7 @@
   {
     "alert_id": "v1019",
     "start_ms": 2010733603800,
-    "end_ms": 2010733604420,
+    "end_ms": 2010733604118,
     "severity": "p1",
     "env": "Vault ",
     "signature": "failover promotion drift",
@@ -173,7 +173,7 @@
   {
     "alert_id": "c1020",
     "start_ms": 2010733801000,
-    "end_ms": 2010733801600,
+    "end_ms": 2010733801307,
     "severity": "p1",
     "env": "core",
     "signature": "checkpoint gap widening",
@@ -182,7 +182,7 @@
   {
     "alert_id": "c1021",
     "start_ms": 2010733801900,
-    "end_ms": 2010733802460,
+    "end_ms": 2010733802185,
     "severity": "p2",
     "env": "CORE ",
     "signature": "standby apply delay",
@@ -191,7 +191,7 @@
   {
     "alert_id": "c1022",
     "start_ms": 2010733802800,
-    "end_ms": 2010733803320,
+    "end_ms": 2010733803070,
     "severity": "p1",
     "env": "core",
     "signature": "split-brain risk detected",
@@ -200,7 +200,7 @@
   {
     "alert_id": "c1023",
     "start_ms": 2010733803700,
-    "end_ms": 2010733804180,
+    "end_ms": 2010733803948,
     "severity": "p2",
     "env": "CORE ",
     "signature": "replication slot orphan",
@@ -209,7 +209,7 @@
   {
     "alert_id": "d1024",
     "start_ms": 2010734001000,
-    "end_ms": 2010734001640,
+    "end_ms": 2010734001330,
     "severity": "p1",
     "env": "dns",
     "signature": "vacuum backlog growth",
@@ -218,7 +218,7 @@
   {
     "alert_id": "d1025",
     "start_ms": 2010734002300,
-    "end_ms": 2010734003000,
+    "end_ms": 2010734002661,
     "severity": "p2",
     "env": "DNS ",
     "signature": "sync commit timeout",
@@ -226,8 +226,8 @@
   },
   {
     "alert_id": "d1026",
-    "start_ms": 2010734003030,
-    "end_ms": 2010734003230,
+    "start_ms": 2010734002691,
+    "end_ms": 2010734002791,
     "severity": "p1",
     "env": "dns",
     "signature": "replica lag spike",
@@ -236,7 +236,7 @@
   {
     "alert_id": "d1027",
     "start_ms": 2010734003900,
-    "end_ms": 2010734004460,
+    "end_ms": 2010734004186,
     "severity": "p1",
     "env": "DNS ",
     "signature": "wal replay stall",
@@ -245,7 +245,7 @@
   {
     "alert_id": "z1028",
     "start_ms": 2010734201000,
-    "end_ms": 2010734201580,
+    "end_ms": 2010734201295,
     "severity": "p2",
     "env": "zone",
     "signature": "failover promotion drift",
@@ -254,7 +254,7 @@
   {
     "alert_id": "z1029",
     "start_ms": 2010734202100,
-    "end_ms": 2010734202720,
+    "end_ms": 2010734202422,
     "severity": "p1",
     "env": "ZONE ",
     "signature": "checkpoint gap widening",
@@ -263,7 +263,7 @@
   {
     "alert_id": "z1030",
     "start_ms": 2010734203300,
-    "end_ms": 2010734203800,
+    "end_ms": 2010734203559,
     "severity": "p2",
     "env": "zone",
     "signature": "standby apply delay",
@@ -272,7 +272,7 @@
   {
     "alert_id": "m1031",
     "start_ms": 2010734401000,
-    "end_ms": 2010734401700,
+    "end_ms": 2010734401362,
     "severity": "p1",
     "env": "mesh",
     "signature": "split-brain risk detected",
@@ -280,8 +280,8 @@
   },
   {
     "alert_id": "m1032",
-    "start_ms": 2010734401730,
-    "end_ms": 2010734401990,
+    "start_ms": 2010734401392,
+    "end_ms": 2010734401524,
     "severity": "p2",
     "env": "MESH ",
     "signature": "replication slot orphan",
@@ -290,7 +290,7 @@
   {
     "alert_id": "m1033",
     "start_ms": 2010734402400,
-    "end_ms": 2010734402940,
+    "end_ms": 2010734402676,
     "severity": "p2",
     "env": "mesh",
     "signature": "vacuum backlog growth",

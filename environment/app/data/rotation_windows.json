@@ -2,49 +2,49 @@
   {
     "env": "prod",
     "severity_scope": "p1",
-    "start_ms": 2010733005380,
-    "end_ms": 2010733005560
+    "start_ms": 2010733005291,
+    "end_ms": 2010733005382
   },
   {
     "env": "dmz",
     "severity_scope": "p1",
-    "start_ms": 2010733201233,
-    "end_ms": 2010733201383
+    "start_ms": 2010733201119,
+    "end_ms": 2010733201196
   },
   {
     "env": "edge",
     "severity_scope": "p1",
-    "start_ms": 2010733402600,
-    "end_ms": 2010733402780
+    "start_ms": 2010733402502,
+    "end_ms": 2010733402593
   },
   {
     "env": "edge",
     "severity_scope": "all",
-    "start_ms": 2010733403773,
-    "end_ms": 2010733403923
+    "start_ms": 2010733403690,
+    "end_ms": 2010733403767
   },
   {
     "env": "core",
     "severity_scope": "all",
-    "start_ms": 2010733802086,
-    "end_ms": 2010733802266
+    "start_ms": 2010733801995,
+    "end_ms": 2010733802086
   },
   {
     "env": "core",
     "severity_scope": "p1",
-    "start_ms": 2010733802973,
-    "end_ms": 2010733803123
+    "start_ms": 2010733802890,
+    "end_ms": 2010733802967
   },
   {
     "env": "zone",
     "severity_scope": "all",
-    "start_ms": 2010734201193,
-    "end_ms": 2010734201373
+    "start_ms": 2010734201098,
+    "end_ms": 2010734201189
   },
   {
     "env": "zone",
     "severity_scope": "p1",
-    "start_ms": 2010734202306,
-    "end_ms": 2010734202456
+    "start_ms": 2010734202207,
+    "end_ms": 2010734202284
   }
 ]

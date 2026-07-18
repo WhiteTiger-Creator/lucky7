@@ -1869,6 +1869,21 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 
 ### Review entry 0451 — core lane
 > **Governance decision (2026-05-10 - #DB-5327)** Yusuf: summary score aggregation domains (final, revising #DB-5231): the six `max_*` **score** fields — `max_stability_pressure_score`, `max_volatility_index`, `max_defer_pressure_score`, `max_ledger_pressure_score`, `max_trust_exposure_score`, and `max_stability_index` — are maxima over the **final admitted response_queue rows only**, using 0 when the queue is empty. Only `max_carry_out_ms` is taken over **every drift window** (admitted or not), 0 when there are no windows. The earlier all-windows form for the score fields in #DB-5231 counted attenuated windows that never reach a responder and is not the shipped behavior; this matches the `maximum_aggregation_domains` split in report_spec.json.
+
+### Review entry 0731 — probe bench
+> **Governance decision (2026-05-14 - #DB-5332)** Rosa: recovery-probe review found the severity-scoped half of the stability probe was systematically under-counting partial probe windows, because a scoped overlap shorter than one full divisor step scored zero. That term therefore ROUNDS UP: `stability_pressure_score = (all_probe_ms // 30) + ceil(severity_probe_ms / 20) + max(alert_count - 1, 0)`. Only the severity-scoped term rounds up; the `all`-scoped term keeps its floor, and the alert-count term is unchanged. In integer arithmetic ceil(x/20) is -(-x // 20). This revises the floored severity term recorded in #DB-5307.
+
+### Review entry 0733 — probe bench
+> **Governance decision (2026-05-14 - #DB-5334)** Rosa: the same under-count applies to the rotation probe, and is corrected the same way: `volatility_index = stability_pressure_score + (all_rotation_probe_ms // 24) + ceil(severity_rotation_probe_ms / 16) + (rotation_segment_count * 2)`. The `all`-scoped rotation term stays floored and the segment term is unchanged. This revises the floored severity term recorded in #DB-5308.
+
+### Review entry 0735 — probe bench
+> **Governance decision (2026-05-15 - #DB-5336)** Marek: defer probe, same correction: `defer_pressure_score = (all_defer_probe_ms // 40) + ceil(severity_defer_probe_ms / 28) + defer_segment_count`. The `all`-scoped defer term stays floored. This revises the floored severity term recorded in #DB-5310.
+
+### Review entry 0737 — ledger bench
+> **Governance decision (2026-05-15 - #DB-5338)** Yusuf: the carry-in half of the ledger pressure score suffered the same partial-step loss, so it rounds up while the carry-out half does not: `ledger_pressure_score = (carry_out_ms // 80) + ceil(carry_in_ms / 120) + max(alert_count - 1, 0)`. The 80 carry-out divisor and the alert term recorded in #DB-5314 are unchanged, and the worked example in that entry predates this correction. This revises the floored carry-in term in #DB-5314.
+
+### Review entry 0739 — probe bench
+> **Governance decision (2026-05-15 - #DB-5340)** Yusuf: recording the rounding map settled across #DB-5332, #DB-5334, #DB-5336 and #DB-5338 for the avoidance of doubt: rounding is NOT uniform across the pipeline and no layer's rounding may be inferred from another's. Each divisor's direction is fixed by its own governing decision and must be read there.
 Shift lead logged a routine recovery observation for core (east) during review window 0451. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 

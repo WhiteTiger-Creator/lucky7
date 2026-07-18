@@ -534,7 +534,8 @@ def build_response_queue(
             )
             stability_pressure_score = (
                 (all_probe_ms // 30)
-                + (severity_probe_ms // 20)
+                # Severity-scoped probe term ROUNDS UP per #DB-5332. ceil(x/20)=-(-x//20).
+                + (-(-severity_probe_ms // 20))
                 + max(window["alert_count"] - 1, 0)
             )
             rotation_all, rotation_severity = _scope_intervals_for_window(
@@ -551,7 +552,8 @@ def build_response_queue(
             volatility_index = (
                 stability_pressure_score
                 + (all_rotation_probe_ms // 24)
-                + (severity_rotation_probe_ms // 16)
+                # Severity-scoped rotation probe ROUNDS UP per #DB-5334. ceil(x/16)=-(-x//16).
+                + (-(-severity_rotation_probe_ms // 16))
                 + (window["rotation_segment_count"] * 2)
             )
             defer_all, defer_severity = _scope_intervals_for_window(
@@ -567,12 +569,14 @@ def build_response_queue(
             )
             defer_pressure_score = (
                 (all_defer_probe_ms // 40)
-                + (severity_defer_probe_ms // 28)
+                # Severity-scoped defer probe ROUNDS UP per #DB-5336. ceil(x/28)=-(-x//28).
+                + (-(-severity_defer_probe_ms // 28))
                 + window["defer_segment_count"]
             )
             ledger_pressure_score = (
                 (window["carry_out_ms"] // 80)
-                + (window["carry_in_ms"] // 120)
+                # Carry-in term ROUNDS UP per #DB-5338. ceil(x/120)=-(-x//120).
+                + (-(-window["carry_in_ms"] // 120))
                 + max(window["alert_count"] - 1, 0)
             )
             stability_index = (

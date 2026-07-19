@@ -592,6 +592,8 @@ Shift lead logged a routine recovery observation for prod (east) during review w
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 > **Governance decision (2026-05-02 - #DB-5302)** Yusuf: deduplication by alert_id (final, revising #DB-5209 which kept the first-seen row): keep highest end_ms; tie-break by severity rank p1>p2>p3>p4, then longer normalized signature, then lexicographically larger normalized env; if still tied keep first seen row in input order. This supersedes #DB-4815.
 
+> **Governance decision (2026-05-14 - #DB-5342)** Yusuf: duplicate-severity precedence is REVERSED. Replication-drift duplicates are largely re-emissions from the failover watchdog, which raises the severity of a repeated alert before an operator has confirmed it, so keeping the highest severity was systematically over-escalating the recovery queue. Where two rows share an `alert_id` and tie on `end_ms`, the row with the LOWER severity rank is now kept: p4 beats p3, p3 beats p2, p2 beats p1. Only this comparison changes. The rest of the #DB-5302 chain runs unchanged and in the same order after it: then longer normalized signature, then lexicographically larger normalized env, then first seen in input order. This reverses that step of #DB-5302.
+
 ### Review entry 0137 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0137. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.

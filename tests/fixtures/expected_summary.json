@@ -31,8 +31,8 @@
       "canonical_alert_count": 39,
       "env_count": 8,
       "severity_counts": {
-        "p1": 19,
-        "p2": 18,
+        "p1": 18,
+        "p2": 19,
         "p3": 1,
         "p4": 1
       },
@@ -60,8 +60,8 @@
       "max_trust_exposure_score": 35,
       "max_carry_out_ms": 813,
       "max_stability_index": 30,
-      "canonical_alert_checksum": "e0f8620a9dfd1e495459f669075a4252cd5f160d42b2279cdff6ed99a3d3b610",
-      "queue_hash_checksum": "3bc3c50a6543eee4e2d244b8aeb034a95ff98bf936de7913d9b26551073027b8",
+      "canonical_alert_checksum": "e41b928cda891e110704a065c7098e7c33d0ea7a3a91bd8e5d9af7439b28867f",
+      "queue_hash_checksum": "f3b6b9580cd0fb6a311bb85900671701d42e34cb026b01d43a0c7aff86a94d6c",
       "freeze_compaction_checksum": "e06e1970f58c9a43da1de75b3c77333ba6cbb18489b494246adc3815876e17e7",
       "reopen_compaction_checksum": "df8702d6b95c309885af3f28de11f16365f6a4a6cd8872b5690e61acc97c2ca9",
       "rotation_compaction_checksum": "1a9cf91558652305c636330438c26af5774fee1df5f79aa786107875af0f1ef8",
@@ -462,7 +462,7 @@
           "source_alert_ids": [
             "D2"
           ],
-          "max_severity": "p1",
+          "max_severity": "p2",
           "idle_gap_ms": 0,
           "carry_in_ms": 0,
           "carry_out_ms": 500,
@@ -1445,14 +1445,14 @@
         "source_alert_ids": [
           "D2"
         ],
-        "max_severity": "p1",
+        "max_severity": "p2",
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
         "ledger_pressure_score": 6,
         "stability_index": 10,
         "priority": "critical",
-        "queue_hash": "59ac770499c8",
+        "queue_hash": "5f3b6faef7ff",
         "window_digest": "1d95234431"
       },
       {

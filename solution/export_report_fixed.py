@@ -128,10 +128,11 @@ def canonicalize_alerts(rows: list[dict]) -> list[dict]:
             continue
         if candidate["end_ms"] < existing["end_ms"]:
             continue
-        if _severity_rank(candidate["severity"]) > _severity_rank(existing["severity"]):
+        # #DB-5342 reverses this step: the LOWER severity rank wins a duplicate tie.
+        if _severity_rank(candidate["severity"]) < _severity_rank(existing["severity"]):
             deduped[alert_id] = candidate
             continue
-        if _severity_rank(candidate["severity"]) < _severity_rank(existing["severity"]):
+        if _severity_rank(candidate["severity"]) > _severity_rank(existing["severity"]):
             continue
         if len(candidate["signature"]) > len(existing["signature"]):
             deduped[alert_id] = candidate

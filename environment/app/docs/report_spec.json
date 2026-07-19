@@ -264,5 +264,66 @@
   "semantics_source": {
     "notes": "This document is the output contract only: file paths, schemas, required fields, repair tokens, digest payloads and checksum serialization. It does NOT define how values are derived.",
     "authority": "Canonicalization, dedupe tie-breaks, window merging, the freeze/reopen/rotation/defer attenuation layers and their scope rules, probe scoring, the risk ledger, replica topology traversal, queue admission, priority rules and queue ordering were settled by the recovery governance board; the authoritative record is /app/incident/recovery_review_log.md. Where an early draft proposal conflicts with a later governance decision, the later decision wins."
+  },
+  "governing_entry_index": {
+    "_note": "Navigation aid only. It records WHICH review entries carry the governing rule for each pipeline stage; it does not restate any rule, value, divisor, threshold or rounding direction. Read the named entries in /app/incident/recovery_review_log.md for the rules themselves. Entries not listed here are either superseded by a later dated entry or carry no reconciler semantics.",
+    "stages": {
+      "canonicalization": [
+        "#DB-5301"
+      ],
+      "deduplication": [
+        "#DB-5302",
+        "#DB-5342"
+      ],
+      "window_construction": [
+        "#DB-5304"
+      ],
+      "freeze_layer": [
+        "#DB-5305"
+      ],
+      "reopen_layer": [
+        "#DB-5307"
+      ],
+      "rotation_layer": [
+        "#DB-5308"
+      ],
+      "defer_layer": [
+        "#DB-5310"
+      ],
+      "probe_scoring": [
+        "#DB-5311",
+        "#DB-5332",
+        "#DB-5334",
+        "#DB-5336"
+      ],
+      "risk_ledger": [
+        "#DB-5313",
+        "#DB-5314",
+        "#DB-5338"
+      ],
+      "trust_graph": [
+        "#DB-5316",
+        "#DB-5317",
+        "#DB-5319",
+        "#DB-5320"
+      ],
+      "queue_admission": [
+        "#DB-5322"
+      ],
+      "priority_assignment": [
+        "#DB-5323"
+      ],
+      "queue_ordering": [
+        "#DB-5325"
+      ],
+      "summary_aggregation": [
+        "#DB-5327"
+      ],
+      "rounding_map": [
+        "#DB-5340"
+      ]
+    },
+    "rounding_warning": "Rounding direction is not uniform across the pipeline and is not inferable from any neighbouring divisor, including between siblings in the same family. Each divisor's direction is fixed by its own entry above; #DB-5340 records the map.",
+    "reversal_warning": "At least one stage has had the DIRECTION of a comparison reversed by a later entry, not merely its constants retuned. Check each stage's latest dated entry before assuming an earlier entry's ordering still holds."
   }
 }

@@ -367,5 +367,113 @@
     "env": "dns",
     "signature": "dup d",
     "muted": false
+  },
+  {
+    "alert_id": "D3",
+    "start_ms": 2010733002700,
+    "end_ms": 2010733002940,
+    "severity": "p1",
+    "env": "prod",
+    "signature": "failover promotion drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D3",
+    "start_ms": 2010733002700,
+    "end_ms": 2010733002940,
+    "severity": "p3",
+    "env": "prod",
+    "signature": "failover promotion drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D4",
+    "start_ms": 2010733201700,
+    "end_ms": 2010733201940,
+    "severity": "p2",
+    "env": "dmz",
+    "signature": "replica lag drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D4",
+    "start_ms": 2010733201700,
+    "end_ms": 2010733201940,
+    "severity": "p4",
+    "env": "dmz",
+    "signature": "replica lag drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D5",
+    "start_ms": 2010733801500,
+    "end_ms": 2010733801740,
+    "severity": "p1",
+    "env": "core",
+    "signature": "quorum handoff drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D5",
+    "start_ms": 2010733801500,
+    "end_ms": 2010733801740,
+    "severity": "p2",
+    "env": "core",
+    "signature": "quorum handoff drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D6",
+    "start_ms": 2010733601800,
+    "end_ms": 2010733602040,
+    "severity": "p2",
+    "env": "vault",
+    "signature": "secret replication drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D6",
+    "start_ms": 2010733601800,
+    "end_ms": 2010733602040,
+    "severity": "p3",
+    "env": "vault",
+    "signature": "secret replication drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D7",
+    "start_ms": 2010733811400,
+    "end_ms": 2010733811640,
+    "severity": "p1",
+    "env": "dns",
+    "signature": "zone transfer drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D7",
+    "start_ms": 2010733811400,
+    "end_ms": 2010733811640,
+    "severity": "p4",
+    "env": "dns",
+    "signature": "zone transfer drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D8",
+    "start_ms": 2010733401800,
+    "end_ms": 2010733402040,
+    "severity": "p3",
+    "env": "edge",
+    "signature": "edge replica drift recheck",
+    "muted": false
+  },
+  {
+    "alert_id": "D8",
+    "start_ms": 2010733401800,
+    "end_ms": 2010733402040,
+    "severity": "p4",
+    "env": "edge",
+    "signature": "edge replica drift recheck",
+    "muted": false
   }
 ]

@@ -521,7 +521,7 @@ def build_response_queue(
                 continue
             # Admission floors sit directly on the conditioned distribution, so a
             # one-millisecond slip anywhere upstream flips queue membership.
-            include_min_ms = 222 if window["max_severity"] == "p1" else 229
+            include_min_ms = 222 if window["max_severity"] == "p1" else 242
             if window["ledger_adjusted_actionable_ms"] < include_min_ms:
                 continue
 

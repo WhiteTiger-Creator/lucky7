@@ -586,17 +586,19 @@ def build_response_queue(
                 + ledger_pressure_score
                 + (window["trust_exposure_score"] // 2)
             )
+            # Critical thresholds tightened by #DB-5344 so the high clauses below are
+            # genuinely reachable; each cutoff sits on the observed distribution.
             if (
                 window["max_severity"] == "p1"
-                and window["ledger_adjusted_actionable_ms"] >= 235
+                and window["ledger_adjusted_actionable_ms"] >= 437
             ) or (
-                window["ledger_adjusted_actionable_ms"] >= 500
-                or stability_index >= 20
-                or window["trust_exposure_score"] >= 24
+                window["ledger_adjusted_actionable_ms"] >= 550
+                or stability_index >= 33
+                or window["trust_exposure_score"] >= 35
             ):
                 priority = "critical"
-            elif window["ledger_adjusted_actionable_ms"] >= 265 or (
-                window["alert_count"] >= 3 and window["max_severity"] in {"p1", "p2"}
+            elif window["ledger_adjusted_actionable_ms"] >= 407 or (
+                window["alert_count"] >= 2 and window["max_severity"] in {"p1", "p2"}
             ) or (
                 window["rotation_segment_count"] == 0
                 and window["risk_adjusted_duration_ms"] >= 340

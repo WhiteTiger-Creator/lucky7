@@ -278,15 +278,15 @@ def test_priority_rules(primary_outputs):
     for row in queue:
         if (
             row["max_severity"] == "p1"
-            and row["ledger_adjusted_actionable_ms"] >= 235
+            and row["ledger_adjusted_actionable_ms"] >= 437
         ) or (
-            row["ledger_adjusted_actionable_ms"] >= 500
-            or row["stability_index"] >= 20
-            or row["trust_exposure_score"] >= 24
+            row["ledger_adjusted_actionable_ms"] >= 550
+            or row["stability_index"] >= 33
+            or row["trust_exposure_score"] >= 35
         ):
             assert row["priority"] == "critical"
-        elif row["ledger_adjusted_actionable_ms"] >= 265 or (
-            row["alert_count"] >= 3 and row["max_severity"] in {"p1", "p2"}
+        elif row["ledger_adjusted_actionable_ms"] >= 407 or (
+            row["alert_count"] >= 2 and row["max_severity"] in {"p1", "p2"}
         ) or (
             row["rotation_segment_count"] == 0
             and row["risk_adjusted_duration_ms"] >= 340
@@ -736,7 +736,7 @@ def test_rotation_compaction_and_scope_are_used(tmp_path: Path):
         assert summary["rotation_compaction_checksum"] == hashlib.sha256(
             "lab|all|130|240\nlab|p1|260|310".encode("utf-8")
         ).hexdigest()
-        assert [row["ticket_id"] for row in queue] == ["lab:100-400", "lab:500-820"]
+        assert [row["ticket_id"] for row in queue] == ["lab:500-820", "lab:100-400"]
     finally:
         ROTATION_PATH.write_text(original_rotation, encoding="utf-8")
 
@@ -788,7 +788,7 @@ def test_defer_compaction_and_scope_are_used(tmp_path: Path):
         assert summary["defer_compaction_checksum"] == hashlib.sha256(
             "lab|all|110|250\nlab|p1|255|325".encode("utf-8")
         ).hexdigest()
-        assert [row["ticket_id"] for row in queue] == ["lab:100-420", "lab:500-860"]
+        assert [row["ticket_id"] for row in queue] == ["lab:500-860", "lab:100-420"]
     finally:
         DEFER_PATH.write_text(original_defer, encoding="utf-8")
 

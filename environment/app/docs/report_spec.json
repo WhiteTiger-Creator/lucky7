@@ -335,11 +335,14 @@
       ],
       "queue_capacity": [
         "#DB-5356"
+      ],
+      "layer_interaction": [
+        "#DB-5354"
       ]
     },
     "rounding_warning": "Rounding direction is not uniform across the pipeline and is not inferable from any neighbouring divisor, including between siblings in the same family. Each divisor's direction is fixed by its own entry above; #DB-5340 records the map.",
     "reversal_warning": "At least one stage has had the DIRECTION of a comparison reversed by a later entry, not merely its constants retuned. Check each stage's latest dated entry before assuming an earlier entry's ordering still holds.",
-    "interaction_warning": "The scoped attenuation layers do not all interact the same way. At least one pair has a precedence rule assigning shared time to one layer; another layer is excluded from it. Read each layer's own entry rather than assuming the layers are independent."
+    "interaction_warning": "The scoped attenuation layers do not all interact the same way and are NOT independent. One layer pair has a precedence rule that assigns their shared time to a single layer; a third layer is excluded from it. That rule is #DB-5354 and it is listed under the layer_interaction stage below \u2014 read it there for which pair, which direction, and which layer is excluded. Do not infer the behaviour from the individual layer entries, none of which describe it."
   },
   "policy_source": {
     "path": "/app/data/recovery_policies.json",

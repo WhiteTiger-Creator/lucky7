@@ -151,6 +151,7 @@ def test_summary_schema(primary_outputs):
         "window_digest_checksum",
         "ledger_checksum",
         "trust_path_digest_checksum",
+        "policy_checksum",
     }
     assert summary["schema_version"] == "db-failover-v1"
     assert list(summary["severity_counts"]) == SEVERITY_ORDER
@@ -273,29 +274,31 @@ def test_queue_required_fields(primary_outputs):
 
 
 def test_priority_rules(primary_outputs):
-    """Queue rows receive priority tiers according to the decided admission thresholds."""
+    """Priority tiers follow each env's RESOLVED policy, not one global threshold set."""
     _, _, _, queue = primary_outputs
+    data = json.loads(POLICY_PATH.read_text())
     for row in queue:
+        p = _resolve(row["env"], data)
         if (
             row["max_severity"] == "p1"
-            and row["ledger_adjusted_actionable_ms"] >= 437
+            and row["ledger_adjusted_actionable_ms"] >= p["critical_p1_ledger_min"]
         ) or (
-            row["ledger_adjusted_actionable_ms"] >= 550
-            or row["stability_index"] >= 33
-            or row["trust_exposure_score"] >= 35
+            row["ledger_adjusted_actionable_ms"] >= p["critical_ledger_min"]
+            or row["stability_index"] >= p["critical_stability_min"]
+            or row["trust_exposure_score"] >= p["critical_trust_min"]
         ):
             assert row["priority"] == "critical"
-        elif row["ledger_adjusted_actionable_ms"] >= 407 or (
+        elif row["ledger_adjusted_actionable_ms"] >= p["high_ledger_min"] or (
             row["alert_count"] >= 2 and row["max_severity"] in {"p1", "p2"}
         ) or (
             row["rotation_segment_count"] == 0
-            and row["risk_adjusted_duration_ms"] >= 340
+            and row["risk_adjusted_duration_ms"] >= p["high_risk_adjusted_min"]
         ) or (
             row["defer_pressure_score"] > 0
-            and row["dispatchable_duration_ms"] >= 320
+            and row["dispatchable_duration_ms"] >= p["high_dispatchable_min"]
         ) or (
-            row["reopen_segment_count"] == 0 and row["duration_ms"] >= 420
-        ) or row["trust_exposure_score"] >= 12:
+            row["reopen_segment_count"] == 0 and row["duration_ms"] >= p["high_duration_min"]
+        ) or row["trust_exposure_score"] >= p["high_trust_min"]:
             assert row["priority"] == "high"
         else:
             assert row["priority"] == "medium"
@@ -1010,3 +1013,72 @@ def test_replication_credential_locked_down():
     assert (info.st_mode & 0o777) == 0o600
     assert info.st_uid == pwd.getpwnam("root").pw_uid
     assert info.st_gid == pwd.getpwnam("root").pw_gid
+
+
+POLICY_PATH = Path("/app/data/recovery_policies.json")
+POLICY_FIELDS = ("admission_min_p1","admission_min_p2","critical_p1_ledger_min","critical_ledger_min",
+                 "critical_stability_min","critical_trust_min","high_ledger_min","high_risk_adjusted_min",
+                 "high_dispatchable_min","high_duration_min","high_trust_min","carry_out_cap","stitch_gap_ms")
+BASELINE = {"admission_min_p1":222,"admission_min_p2":242,"critical_p1_ledger_min":437,
+            "critical_ledger_min":550,"critical_stability_min":33,"critical_trust_min":35,
+            "high_ledger_min":407,"high_risk_adjusted_min":340,"high_dispatchable_min":320,
+            "high_duration_min":420,"high_trust_min":12,"carry_out_cap":921,"stitch_gap_ms":60}
+
+
+def _resolve(env: str, data: dict) -> dict:
+    base = dict(BASELINE)
+    base.update({k: int(v) for k, v in data.get("default", {}).items() if k in BASELINE})
+    raw = data.get("env_overrides", {}).get(env)
+    if isinstance(raw, dict):
+        base.update({k: int(v) for k, v in raw.items() if k in BASELINE})
+    return base
+
+
+def test_policy_source_path_affects_output(tmp_path):
+    """The reconciler reads thresholds from the policy file, not from baked-in constants."""
+    original = POLICY_PATH.read_text()
+    try:
+        data = json.loads(original)
+        data["default"]["admission_min_p1"] = 999
+        POLICY_PATH.write_text(json.dumps(data, indent=2) + "\n")
+        _, summary, _, queue = _run_pipeline(tmp_path / "shifted")
+        assert summary != FIXTURE["primary"]["summary"], "raising the admission floor changed nothing"
+        assert len(queue) < len(FIXTURE["primary"]["queue_rows"])
+    finally:
+        POLICY_PATH.write_text(original)
+
+
+def test_sparse_env_override_inherits_remaining_fields(tmp_path):
+    """An override names only the fields it changes; the rest inherit per #DB-5352."""
+    data = json.loads(POLICY_PATH.read_text())
+    overrides = data.get("env_overrides", {})
+    sparse = [e for e, o in overrides.items() if len(o) == 1]
+    assert sparse, "the shipped policy must exercise a single-field override"
+    for env in sparse:
+        resolved = _resolve(env, data)
+        named = next(iter(overrides[env]))
+        default_resolved = _resolve("__absent__", data)
+        assert resolved[named] == int(overrides[env][named])
+        for field in POLICY_FIELDS:
+            if field != named:
+                assert resolved[field] == default_resolved[field]
+
+
+def test_policy_default_may_omit_fields_and_falls_back_to_baseline():
+    """Fields the policy file's default omits keep their #DB-5350 baseline value."""
+    data = json.loads(POLICY_PATH.read_text())
+    omitted = [f for f in POLICY_FIELDS if f not in data.get("default", {})]
+    assert omitted, "the shipped policy must omit at least one field to exercise the fallback"
+    resolved = _resolve("__absent__", data)
+    for field in omitted:
+        assert resolved[field] == BASELINE[field]
+
+
+def test_policy_checksum_consistent(primary_outputs):
+    """policy_checksum hashes the resolved default then each overridden env, name ascending."""
+    _, summary, _, _ = primary_outputs
+    data = json.loads(POLICY_PATH.read_text())
+    lines = ["default|" + "|".join(str(_resolve("__absent__", data)[k]) for k in POLICY_FIELDS)]
+    for env in sorted(data.get("env_overrides", {})):
+        lines.append(env + "|" + "|".join(str(_resolve(env, data)[k]) for k in POLICY_FIELDS))
+    assert summary["policy_checksum"] == hashlib.sha256("\n".join(lines).encode("utf-8")).hexdigest()

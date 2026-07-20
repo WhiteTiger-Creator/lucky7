@@ -225,7 +225,8 @@
     "ledger_checksum": "SHA-256 of checksum_serialization_contract ledger_rows",
     "trust_path_digest_checksum": "sha256('|'.join(trust_path_digest values in final queue order)) lowercase 64 hex chars",
     "schema_version_note": "Emit summary.json schema_version exactly as this summary_json.schema_version value ('db-failover-v1'). Do NOT use the report_spec top-level 'version' field (2.0), which is the contract document version, not the output schema version.",
-    "severity_counts_note": "severity_counts always contains all four keys in severity_counts_key_order, including levels with a zero count."
+    "severity_counts_note": "severity_counts always contains all four keys in severity_counts_key_order, including levels with a zero count.",
+    "policy_checksum_note": "64-char SHA-256 hex digest over the resolved policies. The serialization is defined in the review log."
   },
   "drift_windows_json": {
     "shape": "flat map {env: [window, ...]}",
@@ -321,9 +322,19 @@
       ],
       "rounding_map": [
         "#DB-5340"
+      ],
+      "policy_resolution": [
+        "#DB-5350",
+        "#DB-5352"
       ]
     },
     "rounding_warning": "Rounding direction is not uniform across the pipeline and is not inferable from any neighbouring divisor, including between siblings in the same family. Each divisor's direction is fixed by its own entry above; #DB-5340 records the map.",
     "reversal_warning": "At least one stage has had the DIRECTION of a comparison reversed by a later entry, not merely its constants retuned. Check each stage's latest dated entry before assuming an earlier entry's ordering still holds."
+  },
+  "policy_source": {
+    "path": "/app/data/recovery_policies.json",
+    "shape": "{\"default\": {field: int, ...}, \"env_overrides\": {env: {field: int, ...}, ...}}",
+    "fixed_path": "This path is absolute and fixed. --input selects the alert stream only and never relocates it.",
+    "_note": "Shape only. The approved baseline, the three-layer resolution order and the policy_checksum serialization are governed by the recovery review log, not by this contract."
   }
 }

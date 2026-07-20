@@ -7,7 +7,7 @@ Then restore `/app/workflow/export_report.py`, the control-plane reconciler that
 This is control-plane reconciliation, not application feature development. The resulting artifacts decide which replication drifts require immediate recovery, which are attenuated by approved policy windows, and how risk carries between repeated drifts in the same environment.
 
 Always read freezes and scoped attenuation policies from their fixed absolute paths:
-`/app/data/change_freezes.json`, `/app/data/reopen_windows.json`, `/app/data/rotation_windows.json`, `/app/data/defer_windows.json`, and `/app/data/replica_topology_edges.json`. `--input` changes only the event stream; policy files never become relative to input/output directories.
+`/app/data/change_freezes.json`, `/app/data/reopen_windows.json`, `/app/data/rotation_windows.json`, `/app/data/defer_windows.json`, and `/app/data/replica_topology_edges.json`, and `/app/data/recovery_policies.json`. `--input` changes only the event stream; policy files never become relative to input/output directories.
 
 `/app/docs/report_spec.json` is the output contract: file paths, schemas, required fields, repair tokens, digest payloads, and byte-level checksum serialization. Match it exactly.
 

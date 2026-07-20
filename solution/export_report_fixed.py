@@ -72,6 +72,67 @@ def _normalize_defer_scope(value: object) -> str:
     return scope if scope in SUPPORTED_DEFER_SCOPES else ""
 
 
+POLICY_PATH = Path("/app/data/recovery_policies.json")
+POLICY_FIELDS = (
+    "admission_min_p1", "admission_min_p2", "critical_p1_ledger_min", "critical_ledger_min",
+    "critical_stability_min", "critical_trust_min", "high_ledger_min", "high_risk_adjusted_min",
+    "high_dispatchable_min", "high_duration_min", "high_trust_min", "carry_out_cap", "stitch_gap_ms",
+)
+DEFAULT_POLICY = {
+    "admission_min_p1": 222, "admission_min_p2": 242, "critical_p1_ledger_min": 437,
+    "critical_ledger_min": 550, "critical_stability_min": 33, "critical_trust_min": 35,
+    "high_ledger_min": 407, "high_risk_adjusted_min": 340, "high_dispatchable_min": 320,
+    "high_duration_min": 420, "high_trust_min": 12, "carry_out_cap": 921, "stitch_gap_ms": 60,
+}
+
+
+def load_policies(path: Path = POLICY_PATH) -> dict:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _normalize_policy(raw: object) -> dict:
+    """Start from the shipped baseline and overlay any field the object supplies."""
+    resolved = dict(DEFAULT_POLICY)
+    if isinstance(raw, dict):
+        for key in POLICY_FIELDS:
+            if key in raw:
+                resolved[key] = _normalize_ms(raw.get(key))
+    return resolved
+
+
+def policy_for_env(env: str, policy_data: dict) -> dict:
+    """Resolve one env's policy: baseline, then default, then that env's override.
+
+    A sparse override supplies only the fields it names; every unlisted field is
+    inherited, so an override is never a complete policy on its own.
+    """
+    base = _normalize_policy(policy_data.get("default", {}))
+    overrides = policy_data.get("env_overrides", {})
+    if not isinstance(overrides, dict):
+        return base
+    raw = overrides.get(env)
+    if not isinstance(raw, dict):
+        return base
+    merged = dict(base)
+    for key in POLICY_FIELDS:
+        if key in raw:
+            merged[key] = _normalize_ms(raw.get(key))
+    return merged
+
+
+def policy_checksum(policy_data: dict) -> str:
+    """Serialize the resolved default followed by each overridden env, env name ascending."""
+    lines = ["default|" + "|".join(str(_normalize_policy(policy_data.get("default", {}))[k]) for k in POLICY_FIELDS)]
+    overrides = policy_data.get("env_overrides", {})
+    if isinstance(overrides, dict):
+        for env in sorted(overrides):
+            resolved = policy_for_env(env, policy_data)
+            lines.append(f"{env}|" + "|".join(str(resolved[k]) for k in POLICY_FIELDS))
+    return hashlib.sha256("\n".join(lines).encode("utf-8")).hexdigest()
+
+
 def _load_json(path: Path) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -337,6 +398,7 @@ def build_drift_windows(
     rotation_rows: list[dict],
     defer_rows: list[dict],
     trust_edge_rows: list[dict],
+    policy_data: dict | None = None,
 ) -> tuple[
     dict[str, list[dict]],
     dict[str, list[tuple[int, int]]],
@@ -357,7 +419,9 @@ def build_drift_windows(
     defer_map = defer_by_scope(defer_rows)
     trust_edges = canonicalize_trust_edges(trust_edge_rows)
     result: dict[str, list[dict]] = {}
+    policy_data = policy_data or {}
     for env, alerts in grouped.items():
+        env_policy = policy_for_env(env, policy_data)
         alerts.sort(key=lambda row: (row["start_ms"], row["end_ms"], row["alert_id"]))
         windows: list[dict] = []
         current: dict | None = None
@@ -370,7 +434,8 @@ def build_drift_windows(
                     "max_severity": row["severity"],
                 }
                 continue
-            if row["start_ms"] <= current["end_ms"] + 45:
+            # Stitch gap comes from the env's resolved policy per #DB-5350.
+            if row["start_ms"] <= current["end_ms"] + env_policy["stitch_gap_ms"]:
                 current["end_ms"] = max(current["end_ms"], row["end_ms"])
                 current["source_alert_ids"].append(row["alert_id"])
                 if _severity_rank(row["severity"]) > _severity_rank(current["max_severity"]):
@@ -487,7 +552,7 @@ def build_drift_windows(
                 + window["actionable_duration_ms"]
                 + (window["rotation_segment_count"] * 15)
                 + (window["defer_segment_count"] * 10),
-                2000,
+                env_policy["carry_out_cap"],
             )
             window["idle_gap_ms"] = idle_gap_ms
             window["carry_in_ms"] = carry_in_ms
@@ -513,15 +578,22 @@ def build_response_queue(
     reopen_map: dict[tuple[str, str], list[tuple[int, int]]],
     rotation_map: dict[tuple[str, str], list[tuple[int, int]]],
     defer_map: dict[tuple[str, str], list[tuple[int, int]]],
+    policy_data: dict | None = None,
 ) -> list[dict]:
     queue: list[dict] = []
+    policy_data = policy_data or {}
     for env, windows in drift_windows.items():
+        env_policy = policy_for_env(env, policy_data)
         for window in windows:
             if window["max_severity"] not in {"p1", "p2"}:
                 continue
             # Admission floors sit directly on the conditioned distribution, so a
             # one-millisecond slip anywhere upstream flips queue membership.
-            include_min_ms = 222 if window["max_severity"] == "p1" else 242
+            include_min_ms = (
+                env_policy["admission_min_p1"]
+                if window["max_severity"] == "p1"
+                else env_policy["admission_min_p2"]
+            )
             if window["ledger_adjusted_actionable_ms"] < include_min_ms:
                 continue
 
@@ -590,24 +662,24 @@ def build_response_queue(
             # genuinely reachable; each cutoff sits on the observed distribution.
             if (
                 window["max_severity"] == "p1"
-                and window["ledger_adjusted_actionable_ms"] >= 437
+                and window["ledger_adjusted_actionable_ms"] >= env_policy["critical_p1_ledger_min"]
             ) or (
-                window["ledger_adjusted_actionable_ms"] >= 550
-                or stability_index >= 33
-                or window["trust_exposure_score"] >= 35
+                window["ledger_adjusted_actionable_ms"] >= env_policy["critical_ledger_min"]
+                or stability_index >= env_policy["critical_stability_min"]
+                or window["trust_exposure_score"] >= env_policy["critical_trust_min"]
             ):
                 priority = "critical"
-            elif window["ledger_adjusted_actionable_ms"] >= 407 or (
+            elif window["ledger_adjusted_actionable_ms"] >= env_policy["high_ledger_min"] or (
                 window["alert_count"] >= 2 and window["max_severity"] in {"p1", "p2"}
             ) or (
                 window["rotation_segment_count"] == 0
-                and window["risk_adjusted_duration_ms"] >= 340
+                and window["risk_adjusted_duration_ms"] >= env_policy["high_risk_adjusted_min"]
             ) or (
-                defer_pressure_score > 0 and window["dispatchable_duration_ms"] >= 320
+                defer_pressure_score > 0 and window["dispatchable_duration_ms"] >= env_policy["high_dispatchable_min"]
             ) or (
-                window["reopen_segment_count"] == 0 and window["duration_ms"] >= 420
+                window["reopen_segment_count"] == 0 and window["duration_ms"] >= env_policy["high_duration_min"]
             ) or (
-                window["trust_exposure_score"] >= 12
+                window["trust_exposure_score"] >= env_policy["high_trust_min"]
             ):
                 priority = "high"
             else:
@@ -708,6 +780,7 @@ def build_summary(
     trust_edges: dict[str, dict[str, int]],
     drift_windows: dict[str, list[dict]],
     queue: list[dict],
+    policy_data: dict | None = None,
 ) -> dict:
     severity_counts = {name: 0 for name in SEVERITY_ORDER}
     for row in canonical:
@@ -873,6 +946,7 @@ def build_summary(
         "window_digest_checksum": window_digest_checksum,
         "ledger_checksum": ledger_checksum,
         "trust_path_digest_checksum": trust_path_digest_checksum,
+        "policy_checksum": policy_checksum(policy_data or {}),
     }
 
 
@@ -884,8 +958,10 @@ def export_report(
     rotation_rows: list[dict],
     defer_rows: list[dict],
     trust_edge_rows: list[dict],
+    policy_data: dict | None = None,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    policy_data = policy_data if policy_data is not None else load_policies()
     canonical = canonicalize_alerts(events)
     (
         drift_windows,
@@ -901,8 +977,9 @@ def export_report(
         rotation_rows,
         defer_rows,
         trust_edge_rows,
+        policy_data,
     )
-    queue = build_response_queue(drift_windows, reopen_map, rotation_map, defer_map)
+    queue = build_response_queue(drift_windows, reopen_map, rotation_map, defer_map, policy_data)
     summary = build_summary(
         events,
         canonical,
@@ -913,6 +990,7 @@ def export_report(
         trust_edges,
         drift_windows,
         queue,
+        policy_data,
     )
 
     (output_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

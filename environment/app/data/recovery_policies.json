@@ -1,0 +1,34 @@
+{
+  "default": {
+    "admission_min_p1": 222,
+    "admission_min_p2": 242,
+    "critical_p1_ledger_min": 437,
+    "critical_ledger_min": 524,
+    "critical_stability_min": 33,
+    "critical_trust_min": 35,
+    "high_ledger_min": 407,
+    "high_risk_adjusted_min": 281,
+    "high_trust_min": 12,
+    "carry_out_cap": 921,
+    "stitch_gap_ms": 60
+  },
+  "env_overrides": {
+    "prod": {
+      "admission_min_p1": 232,
+      "critical_stability_min": 29,
+      "carry_out_cap": 807
+    },
+    "core": {
+      "admission_min_p2": 260,
+      "high_ledger_min": 381,
+      "stitch_gap_ms": 100
+    },
+    "dns": {
+      "critical_trust_min": 23,
+      "high_trust_min": 9
+    },
+    "vault": {
+      "carry_out_cap": 888
+    }
+  }
+}

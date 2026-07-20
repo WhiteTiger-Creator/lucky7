@@ -15,36 +15,7 @@
       "defer_windows": "/app/data/defer_windows.json",
       "replica_topology_edges": "/app/data/replica_topology_edges.json"
     },
-    "forbidden_executable_tokens": [
-      "event[\"seen_ms\"]",
-      "severity == \"p1\""
-    ],
-    "required_executable_tokens": [
-      "int(",
-      ".lower(",
-      ".strip(",
-      "reverse=True",
-      "\"yes\"",
-      "REOPEN_PATH",
-      "ROTATION_PATH",
-      "DEFER_PATH",
-      "REPLICA_TOPOLOGY_EDGES_PATH",
-      "reopen_compaction_checksum",
-      "rotation_compaction_checksum",
-      "defer_compaction_checksum",
-      "stability_pressure_score",
-      "volatility_index",
-      "defer_pressure_score",
-      "ledger_pressure_score",
-      "ledger_adjusted_actionable_ms",
-      "ledger_checksum",
-      "trust_edge_checksum",
-      "trust_exposure_score",
-      "trust_path_digest",
-      "stability_index",
-      "window_digest"
-    ],
-    "token_check_scope": "executable code only (exclude comments and docstrings)"
+    "generalization_contract": "The reconciler is graded on behaviour, not on source text. It must derive every value from the operational inputs and the governing decisions, run correctly against an alternate event stream supplied via --input, and produce identical outputs on reruns. Hardcoded, stubbed or fixture-copied outputs fail these checks. No particular identifiers, helper names or code structure are required."
   },
   "digest_payloads": {
     "trust_path_digest": "first 12 lowercase hex chars of sha256(origin|trust_exposure_score|semicolon_joined_target_rows), where each target row in trust_reachable_envs order is target:score:path_nodes_joined_by_>"
@@ -264,7 +235,7 @@
     "field_policy": "Each window row carries EXACTLY the required_fields keys \u2014 no extras and no omissions. Queue-level fields (ticket_id, priority, queue_hash, window_digest, stability_pressure_score, volatility_index, defer_pressure_score, ledger_pressure_score, stability_index) belong only to response_queue.jsonl rows. env is the top-level map key, not a row field."
   },
   "semantics_source": {
-    "notes": "This document is the output contract only: file paths, schemas, required fields, repair tokens, digest payloads and checksum serialization. It does NOT define how values are derived.",
+    "notes": "This document is the output contract only: file paths, schemas, required fields, digest payloads and checksum serialization. It does NOT define how values are derived.",
     "authority": "Canonicalization, dedupe tie-breaks, window merging, the freeze/reopen/rotation/defer attenuation layers and their scope rules, probe scoring, the risk ledger, replica topology traversal, queue admission, priority rules and queue ordering were settled by the recovery governance board; the authoritative record is /app/incident/recovery_review_log.md. Where an early draft proposal conflicts with a later governance decision, the later decision wins."
   },
   "governing_entry_index": {

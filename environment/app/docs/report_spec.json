@@ -287,7 +287,8 @@
         "#DB-5307"
       ],
       "rotation_layer": [
-        "#DB-5308"
+        "#DB-5308",
+        "#DB-5354"
       ],
       "defer_layer": [
         "#DB-5310"
@@ -330,7 +331,8 @@
       ]
     },
     "rounding_warning": "Rounding direction is not uniform across the pipeline and is not inferable from any neighbouring divisor, including between siblings in the same family. Each divisor's direction is fixed by its own entry above; #DB-5340 records the map.",
-    "reversal_warning": "At least one stage has had the DIRECTION of a comparison reversed by a later entry, not merely its constants retuned. Check each stage's latest dated entry before assuming an earlier entry's ordering still holds."
+    "reversal_warning": "At least one stage has had the DIRECTION of a comparison reversed by a later entry, not merely its constants retuned. Check each stage's latest dated entry before assuming an earlier entry's ordering still holds.",
+    "interaction_warning": "The scoped attenuation layers do not all interact the same way. At least one pair has a precedence rule assigning shared time to one layer; another layer is excluded from it. Read each layer's own entry rather than assuming the layers are independent."
   },
   "policy_source": {
     "path": "/app/data/recovery_policies.json",

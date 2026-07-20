@@ -72,6 +72,7 @@ def _normalize_defer_scope(value: object) -> str:
     return scope if scope in SUPPORTED_DEFER_SCOPES else ""
 
 
+ENV_QUEUE_CAP = 3
 POLICY_PATH = Path("/app/data/recovery_policies.json")
 POLICY_FIELDS = (
     "admission_min_p1", "admission_min_p2", "critical_p1_ledger_min", "critical_ledger_min",
@@ -493,6 +494,16 @@ def build_drift_windows(
             )
             compacted_rotation_segments = _compact_intervals(rotation_segments)
             rotation_overlap = sum(end - start for start, end in compacted_rotation_segments)
+            # #DB-5354: reopen wins any instant both layers cover. The rotation
+            # overlap excludes the reopen/rotation intersection; the reopen overlap
+            # above is untouched.
+            shared_reopen_rotation_ms = 0
+            for rot_start, rot_end in compacted_rotation_segments:
+                for rep_start, rep_end in compacted_reopen_segments:
+                    shared_reopen_rotation_ms += max(
+                        0, min(rot_end, rep_end) - max(rot_start, rep_start)
+                    )
+            rotation_overlap = max(rotation_overlap - shared_reopen_rotation_ms, 0)
             dispatchable_duration = max(risk_adjusted_duration - (rotation_overlap // 3), 0)
             defer_all, defer_severity = _scope_intervals_for_window(
                 defer_map, env, window["max_severity"]
@@ -767,6 +778,17 @@ def build_response_queue(
             row["start_ms"],
         )
     )
+    # Responder capacity cap per #DB-5356. Applied AFTER the full ordering above,
+    # so which rows survive depends on the global tie-break chain, not on env order.
+    retained_per_env: dict[str, int] = {}
+    capped_queue: list[dict] = []
+    for row in queue:
+        taken = retained_per_env.get(row["env"], 0)
+        if taken < ENV_QUEUE_CAP:
+            capped_queue.append(row)
+            retained_per_env[row["env"]] = taken + 1
+    queue = capped_queue
+
     return queue
 
 

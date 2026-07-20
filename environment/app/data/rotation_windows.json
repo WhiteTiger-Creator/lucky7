@@ -46,5 +46,29 @@
     "severity_scope": "p1",
     "start_ms": 2010734202207,
     "end_ms": 2010734202284
+  },
+  {
+    "env": "prod",
+    "severity_scope": "all",
+    "start_ms": 2010733003831,
+    "end_ms": 2010733003915
+  },
+  {
+    "env": "dmz",
+    "severity_scope": "all",
+    "start_ms": 2010733201330,
+    "end_ms": 2010733201403
+  },
+  {
+    "env": "edge",
+    "severity_scope": "all",
+    "start_ms": 2010733401397,
+    "end_ms": 2010733401481
+  },
+  {
+    "env": "vault",
+    "severity_scope": "all",
+    "start_ms": 2010733601509,
+    "end_ms": 2010733601581
   }
 ]

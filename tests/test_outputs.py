@@ -823,8 +823,8 @@ def test_p2_windows_borrow_p1_scope_when_p2_scope_missing(tmp_path: Path):
                 {
                     "env": "lab",
                     "severity_scope": "p1",
-                    "start_ms": 150,
-                    "end_ms": 250,
+                    "start_ms": 200,
+                    "end_ms": 300,
                 }
             ],
         )
@@ -855,11 +855,13 @@ def test_p2_windows_borrow_p1_scope_when_p2_scope_missing(tmp_path: Path):
         _, summary, windows, queue = _run_pipeline(tmp_path / "run", input_path=input_path)
         window = windows["lab"][0]
         assert window["reopen_overlap_ms"] == 100
-        assert window["rotation_overlap_ms"] == 100
+        # rotation [200,300) shares 50ms with reopen [150,250); #DB-5354 assigns
+        # that shared time to reopen, so rotation keeps only its own 50ms.
+        assert window["rotation_overlap_ms"] == 50
         assert window["defer_overlap_ms"] == 100
         assert window["risk_adjusted_duration_ms"] == 250
-        assert window["dispatchable_duration_ms"] == 217
-        assert window["actionable_duration_ms"] == 192
+        assert window["dispatchable_duration_ms"] == 234
+        assert window["actionable_duration_ms"] == 209
         assert summary["queued_window_count"] == 0
         assert queue == []
     finally:
@@ -1082,3 +1084,29 @@ def test_policy_checksum_consistent(primary_outputs):
     for env in sorted(data.get("env_overrides", {})):
         lines.append(env + "|" + "|".join(str(_resolve(env, data)[k]) for k in POLICY_FIELDS))
     assert summary["policy_checksum"] == hashlib.sha256("\n".join(lines).encode("utf-8")).hexdigest()
+
+
+def test_env_queue_cap_applied_after_ordering(primary_outputs):
+    """#DB-5356: at most three rows per env, retained by the GLOBAL order.
+
+    The cap runs as a final pass over the fully ordered queue, so the retained rows
+    are the first three of each env in that order -- not the first three admitted,
+    and not the top three within the env considered on its own.
+    """
+    _, _, windows, queue = primary_outputs
+    per_env = {}
+    for row in queue:
+        per_env[row["env"]] = per_env.get(row["env"], 0) + 1
+    assert per_env, "queue must not be empty"
+    assert max(per_env.values()) <= 3, f"env exceeded the cap: {per_env}"
+    # the shipped data must actually exercise the cap, or the rule is decorative
+    admissible = 0
+    for env, blocks in windows.items():
+        eligible = [b for b in blocks if b["max_severity"] in {"p1", "p2"}]
+        admissible += len(eligible)
+    assert admissible > len(queue), "fixture must contain more admissible windows than the cap allows"
+    # rows retained for an env must be a prefix of that env's rows in queue order
+    seen_order = [r["env"] for r in queue]
+    for env in per_env:
+        idxs = [i for i, e in enumerate(seen_order) if e == env]
+        assert idxs == sorted(idxs)

@@ -1110,3 +1110,23 @@ def test_env_queue_cap_applied_after_ordering(primary_outputs):
     for env in per_env:
         idxs = [i for i, e in enumerate(seen_order) if e == env]
         assert idxs == sorted(idxs)
+
+
+def test_governing_entry_index_is_complete():
+    """Every governing (non-superseded) review entry is reachable from the index.
+
+    The instruction directs agents to the index, so an entry missing from it is
+    effectively undiscoverable no matter how clearly the log states the rule.
+    """
+    import re
+    listed = {e for v in SPEC["governing_entry_index"]["stages"].values() for e in v}
+    log_text = Path("/app/incident/recovery_review_log.md").read_text(encoding="utf-8")
+    pattern = re.compile(r"\*\*[A-Za-z -]+? \(\d{4}-\d{2}-\d{2} - (#DB-\d+)\)\*\*([^\n]*)")
+    governing = {
+        m.group(1)
+        for m in pattern.finditer(log_text)
+        if "*(superseded" not in m.group(2).lower() and "*(revised" not in m.group(2).lower()
+    }
+    assert governing, "no governing entries found -- parser drifted from the log format"
+    missing = sorted(governing - listed)
+    assert not missing, f"governing entries absent from governing_entry_index: {missing}"

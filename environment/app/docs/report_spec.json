@@ -278,7 +278,8 @@
         "#DB-5342"
       ],
       "window_construction": [
-        "#DB-5304"
+        "#DB-5304",
+        "#DB-5348"
       ],
       "freeze_layer": [
         "#DB-5305"
@@ -302,7 +303,8 @@
       "risk_ledger": [
         "#DB-5313",
         "#DB-5314",
-        "#DB-5338"
+        "#DB-5338",
+        "#DB-5346"
       ],
       "trust_graph": [
         "#DB-5316",
@@ -314,10 +316,12 @@
         "#DB-5322"
       ],
       "priority_assignment": [
-        "#DB-5323"
+        "#DB-5323",
+        "#DB-5344"
       ],
       "queue_ordering": [
-        "#DB-5325"
+        "#DB-5325",
+        "#DB-5356"
       ],
       "summary_aggregation": [
         "#DB-5327"
@@ -328,6 +332,9 @@
       "policy_resolution": [
         "#DB-5350",
         "#DB-5352"
+      ],
+      "queue_capacity": [
+        "#DB-5356"
       ]
     },
     "rounding_warning": "Rounding direction is not uniform across the pipeline and is not inferable from any neighbouring divisor, including between siblings in the same family. Each divisor's direction is fixed by its own entry above; #DB-5340 records the map.",

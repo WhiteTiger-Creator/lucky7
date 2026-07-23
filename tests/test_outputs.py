@@ -218,7 +218,7 @@ def test_windows_schema_and_sorting(primary_outputs):
                 row["dispatchable_duration_ms"] - (-(-row["defer_overlap_ms"] // 4)), 0
             )
             assert row["ledger_adjusted_actionable_ms"] == (
-                row["actionable_duration_ms"] + (row["carry_in_ms"] // 4)
+                row["actionable_duration_ms"] + (-(-row["carry_in_ms"] // 4))
             )
             assert row["source_alert_ids"] == sorted(row["source_alert_ids"])
             assert row["trust_reachable_envs"] == sorted(row["trust_reachable_envs"])
@@ -976,7 +976,7 @@ def test_stateful_risk_ledger_propagates_and_decays_between_windows(tmp_path: Pa
         assert len(summary["ledger_checksum"]) == 64
         second_queue = next(row for row in queue if row["ticket_id"] == "lab:600-850")
         # carry-in half rounds UP per #DB-5338; carry-out half stays floored
-        assert second_queue["ledger_pressure_score"] == (450 // 80) + (-(-200 // 120))
+        assert second_queue["ledger_pressure_score"] == (-(-450 // 80)) + (-(-200 // 120))
     finally:
         for path, content in originals.items():
             path.write_text(content, encoding="utf-8")

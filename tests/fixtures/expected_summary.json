@@ -52,26 +52,26 @@
       "total_defer_overlap_ms": 400,
       "total_defer_segment_count": 8,
       "total_actionable_duration_ms": 11066,
-      "total_ledger_adjusted_actionable_ms": 13190,
+      "total_ledger_adjusted_actionable_ms": 13202,
       "longest_window_ms": 692,
       "queued_window_count": 22,
       "muted_excluded_count": 2,
       "max_stability_pressure_score": 4,
       "max_volatility_index": 9,
       "max_defer_pressure_score": 2,
-      "max_ledger_pressure_score": 18,
+      "max_ledger_pressure_score": 19,
       "max_trust_exposure_score": 90,
       "max_carry_out_ms": 921,
-      "max_stability_index": 64,
+      "max_stability_index": 65,
       "canonical_alert_checksum": "53e280082b72e1b1b39f522e9818fd3ca992f74f5063cf73530a308deb848cfe",
-      "queue_hash_checksum": "6351f8b453362495931f99bacd39e555ef4dca9680b70abc6a1db6a699eeb21d",
+      "queue_hash_checksum": "697594dec39095c028e8b830d39328e0a34e5a6bc7db4f964277bda3ade17bdf",
       "freeze_compaction_checksum": "e06e1970f58c9a43da1de75b3c77333ba6cbb18489b494246adc3815876e17e7",
       "reopen_compaction_checksum": "df8702d6b95c309885af3f28de11f16365f6a4a6cd8872b5690e61acc97c2ca9",
       "rotation_compaction_checksum": "c9c18569993abcc389e6b78b5b39605b6a76b610d0eb25e0dcfb1d9233027a4c",
       "defer_compaction_checksum": "a0b6e627b4996cb791b280442e560ac37669fef0fa4fcec82e8f04ac5351751e",
       "trust_edge_checksum": "9e21caca5a5a1ec1e5e26420bd0acd2cfc3037fc6738d97f5e6ac48042826f19",
-      "window_digest_checksum": "3d45b052e1eddc6aa686a551eb8646c81e21e6c58411f1f4af5d75bc41da50e5",
-      "ledger_checksum": "063f4a967787e2961384e3627dc25d62d3e7a678897f7d457c2b2b751056f8f1",
+      "window_digest_checksum": "cc25fa5956658542327de562b9b105805494dc4623cbbfbd411a1211511bc590",
+      "ledger_checksum": "f8b34d90828db04d35ddb1499edf0178e3f7482a170ea40e6cd321cf416885a5",
       "trust_path_digest_checksum": "5f2896b3dd70bbc80d5dd7a08753c29457d144d189c599bae505dd71476e5b68",
       "policy_checksum": "2e3e37a9741a294b92436ecf20509c47a379787699a462d4dcb7c88d450ddeea"
     },
@@ -179,9 +179,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 193,
-          "carry_in_ms": 567,
-          "carry_out_ms": 807,
-          "ledger_adjusted_actionable_ms": 381,
+          "carry_in_ms": 566,
+          "carry_out_ms": 806,
+          "ledger_adjusted_actionable_ms": 382,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -219,9 +219,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 160,
-          "carry_in_ms": 727,
+          "carry_in_ms": 726,
           "carry_out_ms": 921,
-          "ledger_adjusted_actionable_ms": 413,
+          "ledger_adjusted_actionable_ms": 414,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -259,9 +259,9 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 615,
-          "carry_in_ms": 614,
-          "carry_out_ms": 839,
-          "ledger_adjusted_actionable_ms": 353,
+          "carry_in_ms": 613,
+          "carry_out_ms": 838,
+          "ledger_adjusted_actionable_ms": 354,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -299,8 +299,8 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 630,
-          "carry_in_ms": 524,
-          "carry_out_ms": 699,
+          "carry_in_ms": 523,
+          "carry_out_ms": 698,
           "ledger_adjusted_actionable_ms": 306,
           "trust_reachable_envs": [
             "dns",
@@ -386,7 +386,7 @@
           "idle_gap_ms": 342,
           "carry_in_ms": 157,
           "carry_out_ms": 776,
-          "ledger_adjusted_actionable_ms": 658,
+          "ledger_adjusted_actionable_ms": 659,
           "trust_reachable_envs": [
             "dns",
             "edge",
@@ -468,7 +468,7 @@
           "idle_gap_ms": 670,
           "carry_in_ms": 367,
           "carry_out_ms": 576,
-          "ledger_adjusted_actionable_ms": 300,
+          "ledger_adjusted_actionable_ms": 301,
           "trust_reachable_envs": [
             "dns",
             "edge",
@@ -548,7 +548,7 @@
           "idle_gap_ms": 900,
           "carry_in_ms": 50,
           "carry_out_ms": 290,
-          "ledger_adjusted_actionable_ms": 252,
+          "ledger_adjusted_actionable_ms": 253,
           "trust_reachable_envs": [
             "mesh",
             "zone"
@@ -740,7 +740,7 @@
           "idle_gap_ms": 100,
           "carry_in_ms": 350,
           "carry_out_ms": 757,
-          "ledger_adjusted_actionable_ms": 469,
+          "ledger_adjusted_actionable_ms": 470,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -780,7 +780,7 @@
           "idle_gap_ms": 364,
           "carry_in_ms": 575,
           "carry_out_ms": 815,
-          "ledger_adjusted_actionable_ms": 383,
+          "ledger_adjusted_actionable_ms": 384,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -820,7 +820,7 @@
           "idle_gap_ms": 360,
           "carry_in_ms": 635,
           "carry_out_ms": 903,
-          "ledger_adjusted_actionable_ms": 411,
+          "ledger_adjusted_actionable_ms": 412,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -938,7 +938,7 @@
           "idle_gap_ms": 876,
           "carry_in_ms": 86,
           "carry_out_ms": 325,
-          "ledger_adjusted_actionable_ms": 260,
+          "ledger_adjusted_actionable_ms": 261,
           "trust_reachable_envs": [
             "zone"
           ],
@@ -1017,9 +1017,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 745,
-          "carry_in_ms": 83,
-          "carry_out_ms": 335,
-          "ledger_adjusted_actionable_ms": 272,
+          "carry_in_ms": 82,
+          "carry_out_ms": 334,
+          "ledger_adjusted_actionable_ms": 273,
           "trust_reachable_envs": [
             "core",
             "dmz",
@@ -1060,8 +1060,8 @@
           ],
           "max_severity": "p3",
           "idle_gap_ms": 211,
-          "carry_in_ms": 230,
-          "carry_out_ms": 470,
+          "carry_in_ms": 228,
+          "carry_out_ms": 468,
           "ledger_adjusted_actionable_ms": 297,
           "trust_reachable_envs": [
             "core",
@@ -1104,8 +1104,8 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 460,
-          "carry_in_ms": 240,
-          "carry_out_ms": 681,
+          "carry_in_ms": 238,
+          "carry_out_ms": 679,
           "ledger_adjusted_actionable_ms": 476,
           "trust_reachable_envs": [
             "core",
@@ -1147,8 +1147,8 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 1330,
-          "carry_in_ms": 16,
-          "carry_out_ms": 253,
+          "carry_in_ms": 14,
+          "carry_out_ms": 251,
           "ledger_adjusted_actionable_ms": 226,
           "trust_reachable_envs": [
             "core",
@@ -1232,7 +1232,7 @@
           "idle_gap_ms": 100,
           "carry_in_ms": 350,
           "carry_out_ms": 828,
-          "ledger_adjusted_actionable_ms": 550,
+          "ledger_adjusted_actionable_ms": 551,
           "trust_reachable_envs": [
             "mesh",
             "zone"
@@ -1341,8 +1341,8 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 923,
-          "carry_in_ms": 424,
-          "carry_out_ms": 705,
+          "carry_in_ms": 423,
+          "carry_out_ms": 704,
           "ledger_adjusted_actionable_ms": 387,
           "trust_reachable_envs": [
             "mesh",
@@ -1487,7 +1487,7 @@
         "idle_gap_ms": 342,
         "carry_in_ms": 157,
         "carry_out_ms": 776,
-        "ledger_adjusted_actionable_ms": 658,
+        "ledger_adjusted_actionable_ms": 659,
         "trust_reachable_envs": [
           "dns",
           "edge",
@@ -1513,11 +1513,11 @@
         "stability_pressure_score": 4,
         "volatility_index": 4,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 13,
-        "stability_index": 36,
+        "ledger_pressure_score": 14,
+        "stability_index": 37,
         "priority": "critical",
-        "queue_hash": "86660c36eb1d",
-        "window_digest": "3dcdce63b6"
+        "queue_hash": "ea71fc76c420",
+        "window_digest": "97174a2158"
       },
       {
         "ticket_id": "core:2010733800000-2010733800600",
@@ -1563,11 +1563,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 7,
-        "stability_index": 17,
+        "ledger_pressure_score": 8,
+        "stability_index": 18,
         "priority": "critical",
-        "queue_hash": "9c1aaf545561",
-        "window_digest": "a364d815b2"
+        "queue_hash": "fda1f35bf7ed",
+        "window_digest": "5a89c696f8"
       },
       {
         "ticket_id": "vault:2010733601000-2010733601536",
@@ -1590,7 +1590,7 @@
         "idle_gap_ms": 100,
         "carry_in_ms": 350,
         "carry_out_ms": 828,
-        "ledger_adjusted_actionable_ms": 550,
+        "ledger_adjusted_actionable_ms": 551,
         "trust_reachable_envs": [
           "mesh",
           "zone"
@@ -1611,11 +1611,11 @@
         "stability_pressure_score": 3,
         "volatility_index": 6,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 14,
-        "stability_index": 24,
+        "ledger_pressure_score": 15,
+        "stability_index": 25,
         "priority": "critical",
-        "queue_hash": "1121db573015",
-        "window_digest": "8c2d0f607f"
+        "queue_hash": "e62ba6e940a2",
+        "window_digest": "5123157c6a"
       },
       {
         "ticket_id": "mesh:2010734401000-2010734401524",
@@ -1657,11 +1657,11 @@
         "stability_pressure_score": 1,
         "volatility_index": 1,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 7,
-        "stability_index": 10,
+        "ledger_pressure_score": 8,
+        "stability_index": 11,
         "priority": "critical",
-        "queue_hash": "0c6ce52d8a04",
-        "window_digest": "87b9140fce"
+        "queue_hash": "455c65953ccf",
+        "window_digest": "3bfcf166d0"
       },
       {
         "ticket_id": "prod:2010733003400-2010733003870",
@@ -1682,8 +1682,8 @@
         "defer_segment_count": 1,
         "actionable_duration_ms": 416,
         "idle_gap_ms": 460,
-        "carry_in_ms": 240,
-        "carry_out_ms": 681,
+        "carry_in_ms": 238,
+        "carry_out_ms": 679,
         "ledger_adjusted_actionable_ms": 476,
         "trust_reachable_envs": [
           "core",
@@ -1711,11 +1711,11 @@
         "stability_pressure_score": 3,
         "volatility_index": 6,
         "defer_pressure_score": 2,
-        "ledger_pressure_score": 11,
-        "stability_index": 64,
+        "ledger_pressure_score": 12,
+        "stability_index": 65,
         "priority": "critical",
-        "queue_hash": "116c35cdf6bb",
-        "window_digest": "76388c70f7"
+        "queue_hash": "43bf9ac5d86d",
+        "window_digest": "6cbbfbd1fd"
       },
       {
         "ticket_id": "edge:2010733401000-2010733401436",
@@ -1738,7 +1738,7 @@
         "idle_gap_ms": 100,
         "carry_in_ms": 350,
         "carry_out_ms": 757,
-        "ledger_adjusted_actionable_ms": 469,
+        "ledger_adjusted_actionable_ms": 470,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -1762,11 +1762,11 @@
         "stability_pressure_score": 3,
         "volatility_index": 6,
         "defer_pressure_score": 2,
-        "ledger_pressure_score": 13,
-        "stability_index": 29,
+        "ledger_pressure_score": 14,
+        "stability_index": 30,
         "priority": "critical",
-        "queue_hash": "7fb3e13193a7",
-        "window_digest": "908db9c63c"
+        "queue_hash": "af3b6ad41627",
+        "window_digest": "13ecc37f39"
       },
       {
         "ticket_id": "prod:2010733001000-2010733001455",
@@ -1816,11 +1816,11 @@
         "stability_pressure_score": 1,
         "volatility_index": 1,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 6,
-        "stability_index": 52,
+        "ledger_pressure_score": 7,
+        "stability_index": 53,
         "priority": "critical",
-        "queue_hash": "3e324cf83666",
-        "window_digest": "cc13084dcb"
+        "queue_hash": "aebfbfd3ada9",
+        "window_digest": "f10fc96294"
       },
       {
         "ticket_id": "dns:2010734002300-2010734002791",
@@ -1864,11 +1864,11 @@
         "stability_pressure_score": 1,
         "volatility_index": 1,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 6,
-        "stability_index": 11,
+        "ledger_pressure_score": 7,
+        "stability_index": 12,
         "priority": "critical",
-        "queue_hash": "4b75e8e89296",
-        "window_digest": "7660412e10"
+        "queue_hash": "d14f4dca7981",
+        "window_digest": "f1bc941ba5"
       },
       {
         "ticket_id": "dmz:2010733203200-2010733203530",
@@ -1915,11 +1915,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 12,
-        "stability_index": 31,
+        "ledger_pressure_score": 13,
+        "stability_index": 32,
         "priority": "critical",
-        "queue_hash": "c2deb7f01fa4",
-        "window_digest": "eaafc07d83"
+        "queue_hash": "26ccc1de23d0",
+        "window_digest": "01eda967ce"
       },
       {
         "ticket_id": "core:2010733801900-2010733802185",
@@ -1940,9 +1940,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 232,
         "idle_gap_ms": 160,
-        "carry_in_ms": 727,
+        "carry_in_ms": 726,
         "carry_out_ms": 921,
-        "ledger_adjusted_actionable_ms": 413,
+        "ledger_adjusted_actionable_ms": 414,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -1965,11 +1965,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 5,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 18,
-        "stability_index": 33,
+        "ledger_pressure_score": 19,
+        "stability_index": 34,
         "priority": "critical",
-        "queue_hash": "c356226a440d",
-        "window_digest": "94fda09888"
+        "queue_hash": "e29a0482cc3b",
+        "window_digest": "f6fc161064"
       },
       {
         "ticket_id": "edge:2010733402400-2010733402706",
@@ -1992,7 +1992,7 @@
         "idle_gap_ms": 360,
         "carry_in_ms": 635,
         "carry_out_ms": 903,
-        "ledger_adjusted_actionable_ms": 411,
+        "ledger_adjusted_actionable_ms": 412,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -2015,11 +2015,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 8,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 17,
-        "stability_index": 33,
+        "ledger_pressure_score": 18,
+        "stability_index": 34,
         "priority": "critical",
-        "queue_hash": "03d4953ea056",
-        "window_digest": "38478d691b"
+        "queue_hash": "e4a15930e7b7",
+        "window_digest": "8b1b0d5214"
       },
       {
         "ticket_id": "core:2010733802800-2010733803070",
@@ -2040,9 +2040,9 @@
         "defer_segment_count": 1,
         "actionable_duration_ms": 200,
         "idle_gap_ms": 615,
-        "carry_in_ms": 614,
-        "carry_out_ms": 839,
-        "ledger_adjusted_actionable_ms": 353,
+        "carry_in_ms": 613,
+        "carry_out_ms": 838,
+        "ledger_adjusted_actionable_ms": 354,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -2065,11 +2065,11 @@
         "stability_pressure_score": 2,
         "volatility_index": 9,
         "defer_pressure_score": 2,
-        "ledger_pressure_score": 16,
-        "stability_index": 37,
+        "ledger_pressure_score": 17,
+        "stability_index": 38,
         "priority": "critical",
-        "queue_hash": "42b4eb499c18",
-        "window_digest": "4aecdbc780"
+        "queue_hash": "e0ee755496a3",
+        "window_digest": "57f9704340"
       },
       {
         "ticket_id": "dmz:2010733204200-2010733204446",
@@ -2092,7 +2092,7 @@
         "idle_gap_ms": 670,
         "carry_in_ms": 367,
         "carry_out_ms": 576,
-        "ledger_adjusted_actionable_ms": 300,
+        "ledger_adjusted_actionable_ms": 301,
         "trust_reachable_envs": [
           "dns",
           "edge",
@@ -2116,11 +2116,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 11,
-        "stability_index": 30,
+        "ledger_pressure_score": 12,
+        "stability_index": 31,
         "priority": "critical",
-        "queue_hash": "0a8afbc19776",
-        "window_digest": "b16791b526"
+        "queue_hash": "bbe3c4f8f06e",
+        "window_digest": "6a36ff6af8"
       },
       {
         "ticket_id": "prod:2010733002200-2010733002489",
@@ -2141,9 +2141,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 252,
         "idle_gap_ms": 745,
-        "carry_in_ms": 83,
-        "carry_out_ms": 335,
-        "ledger_adjusted_actionable_ms": 272,
+        "carry_in_ms": 82,
+        "carry_out_ms": 334,
+        "ledger_adjusted_actionable_ms": 273,
         "trust_reachable_envs": [
           "core",
           "dmz",
@@ -2169,11 +2169,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 5,
-        "stability_index": 50,
+        "ledger_pressure_score": 6,
+        "stability_index": 51,
         "priority": "critical",
-        "queue_hash": "01b4f1ed4477",
-        "window_digest": "774d9c7cf3"
+        "queue_hash": "8e586258c935",
+        "window_digest": "c2fc312dbb"
       },
       {
         "ticket_id": "dns:2010733810000-2010733810500",
@@ -2216,11 +2216,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 6,
-        "stability_index": 10,
+        "ledger_pressure_score": 7,
+        "stability_index": 11,
         "priority": "high",
-        "queue_hash": "5f3b6faef7ff",
-        "window_digest": "56932bc69e"
+        "queue_hash": "97e4843e787b",
+        "window_digest": "c3ffc508fa"
       },
       {
         "ticket_id": "vault:2010733602600-2010733602877",
@@ -2263,11 +2263,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 17,
-        "stability_index": 21,
+        "ledger_pressure_score": 18,
+        "stability_index": 22,
         "priority": "high",
-        "queue_hash": "7993f0028b76",
-        "window_digest": "3d1bca04e7"
+        "queue_hash": "ff6919659681",
+        "window_digest": "f8301a26dc"
       },
       {
         "ticket_id": "vault:2010733600500-2010733600900",
@@ -2357,11 +2357,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 4,
-        "stability_index": 8,
+        "ledger_pressure_score": 5,
+        "stability_index": 9,
         "priority": "high",
-        "queue_hash": "f7547a1551dd",
-        "window_digest": "ba16fd4d83"
+        "queue_hash": "3715d9eef9d6",
+        "window_digest": "74cf642645"
       },
       {
         "ticket_id": "edge:2010733403600-2010733403870",
@@ -2407,11 +2407,11 @@
         "stability_pressure_score": 2,
         "volatility_index": 7,
         "defer_pressure_score": 2,
-        "ledger_pressure_score": 12,
-        "stability_index": 29,
+        "ledger_pressure_score": 13,
+        "stability_index": 30,
         "priority": "high",
-        "queue_hash": "025022a0b80f",
-        "window_digest": "dfd35077db"
+        "queue_hash": "cff2d43fb124",
+        "window_digest": "5417f52440"
       },
       {
         "ticket_id": "mesh:2010734402400-2010734402676",
@@ -2434,7 +2434,7 @@
         "idle_gap_ms": 876,
         "carry_in_ms": 86,
         "carry_out_ms": 325,
-        "ledger_adjusted_actionable_ms": 260,
+        "ledger_adjusted_actionable_ms": 261,
         "trust_reachable_envs": [
           "zone"
         ],
@@ -2452,11 +2452,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 5,
-        "stability_index": 7,
+        "ledger_pressure_score": 6,
+        "stability_index": 8,
         "priority": "medium",
-        "queue_hash": "6d94987bdff8",
-        "window_digest": "d920f58f97"
+        "queue_hash": "d67f761f2e22",
+        "window_digest": "73a57d6fb7"
       },
       {
         "ticket_id": "zone:2010734202100-2010734202422",
@@ -2497,11 +2497,11 @@
         "stability_pressure_score": 2,
         "volatility_index": 9,
         "defer_pressure_score": 2,
-        "ledger_pressure_score": 3,
-        "stability_index": 15,
+        "ledger_pressure_score": 4,
+        "stability_index": 16,
         "priority": "medium",
-        "queue_hash": "ab958ffa037b",
-        "window_digest": "8a625c79b7"
+        "queue_hash": "89706d5fad2e",
+        "window_digest": "af20430b38"
       },
       {
         "ticket_id": "zone:2010734201000-2010734201295",
@@ -2542,11 +2542,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 5,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 3,
-        "stability_index": 9,
+        "ledger_pressure_score": 4,
+        "stability_index": 10,
         "priority": "medium",
-        "queue_hash": "85b26b92de95",
-        "window_digest": "3ab3406fc1"
+        "queue_hash": "478c7c4cc7bb",
+        "window_digest": "71791bcb00"
       }
     ]
   },
@@ -2576,26 +2576,26 @@
       "total_defer_overlap_ms": 53,
       "total_defer_segment_count": 1,
       "total_actionable_duration_ms": 3524,
-      "total_ledger_adjusted_actionable_ms": 3527,
+      "total_ledger_adjusted_actionable_ms": 3528,
       "longest_window_ms": 500,
       "queued_window_count": 10,
       "muted_excluded_count": 1,
       "max_stability_pressure_score": 3,
       "max_volatility_index": 10,
       "max_defer_pressure_score": 2,
-      "max_ledger_pressure_score": 6,
+      "max_ledger_pressure_score": 7,
       "max_trust_exposure_score": 90,
       "max_carry_out_ms": 500,
-      "max_stability_index": 49,
+      "max_stability_index": 50,
       "canonical_alert_checksum": "466ceab8a7fe142e5f87f0d7ba34a1293f5817688a0c77db59c65fa642fb6a12",
-      "queue_hash_checksum": "211fe8ccd3f899091ff4a225766b877a9c0b7a58d5c08649be2a5fe2c2270ae9",
+      "queue_hash_checksum": "7e643f5674ed9a9ed31ce303b2dd951e4897723f20c492129d76f582655a3114",
       "freeze_compaction_checksum": "e06e1970f58c9a43da1de75b3c77333ba6cbb18489b494246adc3815876e17e7",
       "reopen_compaction_checksum": "df8702d6b95c309885af3f28de11f16365f6a4a6cd8872b5690e61acc97c2ca9",
       "rotation_compaction_checksum": "c9c18569993abcc389e6b78b5b39605b6a76b610d0eb25e0dcfb1d9233027a4c",
       "defer_compaction_checksum": "a0b6e627b4996cb791b280442e560ac37669fef0fa4fcec82e8f04ac5351751e",
       "trust_edge_checksum": "9e21caca5a5a1ec1e5e26420bd0acd2cfc3037fc6738d97f5e6ac48042826f19",
-      "window_digest_checksum": "e2cee7507055645032a6d82c2e0a5ed5077a6b9715e717f511ae20f5fd82aa53",
-      "ledger_checksum": "0f4356ee628f1bc5efde12ab7bdd53f6c1358cb0b4f5da664167a980b0968d74",
+      "window_digest_checksum": "37c7ba9fb4e48d81c6e5a34972983240ec629a65035a9b28848c0682a32488a4",
+      "ledger_checksum": "79018e023e4b2f1e3376a6ae3e9cd28e9f2de41b43d0603f6e7f74c96b607d86",
       "trust_path_digest_checksum": "81f78111345fd864e5e09e451249c625d842ebee4eb0c84f7cb6fed86f9c52b3",
       "policy_checksum": "2e3e37a9741a294b92436ecf20509c47a379787699a462d4dcb7c88d450ddeea"
     },
@@ -2665,7 +2665,7 @@
           "idle_gap_ms": 590,
           "carry_in_ms": 15,
           "carry_out_ms": 282,
-          "ledger_adjusted_actionable_ms": 270,
+          "ledger_adjusted_actionable_ms": 271,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -3099,11 +3099,11 @@
         "stability_pressure_score": 3,
         "volatility_index": 10,
         "defer_pressure_score": 2,
-        "ledger_pressure_score": 5,
-        "stability_index": 36,
+        "ledger_pressure_score": 6,
+        "stability_index": 37,
         "priority": "critical",
-        "queue_hash": "c8d08b033e83",
-        "window_digest": "2969bb3e0a"
+        "queue_hash": "6fcb8c78fa69",
+        "window_digest": "e0068bd731"
       },
       {
         "ticket_id": "prod:2010733001000-2010733001350",
@@ -3152,11 +3152,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 4,
-        "stability_index": 49,
+        "ledger_pressure_score": 5,
+        "stability_index": 50,
         "priority": "critical",
-        "queue_hash": "77197c5dfb14",
-        "window_digest": "051475be93"
+        "queue_hash": "b82aa3d7a280",
+        "window_digest": "3e747116bf"
       },
       {
         "ticket_id": "dmz:2010733202400-2010733202731",
@@ -3203,11 +3203,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 4,
-        "stability_index": 23,
+        "ledger_pressure_score": 5,
+        "stability_index": 24,
         "priority": "critical",
-        "queue_hash": "281bb1347f2f",
-        "window_digest": "b26b19ba7d"
+        "queue_hash": "cd1b52b5b117",
+        "window_digest": "1020ef23fe"
       },
       {
         "ticket_id": "prod:2010733003300-2010733003607",
@@ -3256,11 +3256,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 3,
-        "stability_index": 48,
+        "ledger_pressure_score": 4,
+        "stability_index": 49,
         "priority": "critical",
-        "queue_hash": "80b58432adfe",
-        "window_digest": "20a11f54fc"
+        "queue_hash": "9963cc878611",
+        "window_digest": "6c885b630f"
       },
       {
         "ticket_id": "vault:2010733400200-2010733400700",
@@ -3303,11 +3303,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 6,
-        "stability_index": 10,
+        "ledger_pressure_score": 7,
+        "stability_index": 11,
         "priority": "high",
-        "queue_hash": "6436d1398174",
-        "window_digest": "5f7f12220a"
+        "queue_hash": "8c136d83ba9d",
+        "window_digest": "2ad2d05012"
       },
       {
         "ticket_id": "vault:2010733601000-2010733601369",
@@ -3350,11 +3350,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 4,
-        "stability_index": 8,
+        "ledger_pressure_score": 5,
+        "stability_index": 9,
         "priority": "high",
-        "queue_hash": "3e0e0d0dd284",
-        "window_digest": "f0ffc40c17"
+        "queue_hash": "583cd28b365c",
+        "window_digest": "7ca958afaa"
       },
       {
         "ticket_id": "core:2010733401000-2010733401310",
@@ -3400,11 +3400,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 3,
-        "stability_index": 13,
+        "ledger_pressure_score": 4,
+        "stability_index": 14,
         "priority": "high",
-        "queue_hash": "dfa21df2c0ce",
-        "window_digest": "afc0286aa8"
+        "queue_hash": "765103bc3caf",
+        "window_digest": "d574e49936"
       },
       {
         "ticket_id": "core:2010733402800-2010733403087",
@@ -3450,11 +3450,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 3,
-        "stability_index": 13,
+        "ledger_pressure_score": 4,
+        "stability_index": 14,
         "priority": "high",
-        "queue_hash": "a9b3f3e4fae0",
-        "window_digest": "bfd619a924"
+        "queue_hash": "4389d60028c6",
+        "window_digest": "a66ae48e91"
       },
       {
         "ticket_id": "core:2010733401900-2010733402167",
@@ -3477,7 +3477,7 @@
         "idle_gap_ms": 590,
         "carry_in_ms": 15,
         "carry_out_ms": 282,
-        "ledger_adjusted_actionable_ms": 270,
+        "ledger_adjusted_actionable_ms": 271,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -3500,11 +3500,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 4,
-        "stability_index": 14,
+        "ledger_pressure_score": 5,
+        "stability_index": 15,
         "priority": "high",
-        "queue_hash": "61b23ede0bfd",
-        "window_digest": "9da5f981fe"
+        "queue_hash": "f4392c0d6423",
+        "window_digest": "36d46f1deb"
       },
       {
         "ticket_id": "vault:2010733602600-2010733602854",
@@ -3547,11 +3547,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 3,
-        "stability_index": 7,
+        "ledger_pressure_score": 4,
+        "stability_index": 8,
         "priority": "medium",
-        "queue_hash": "5bced3bc17e4",
-        "window_digest": "87d778fd2c"
+        "queue_hash": "a5f17bd0cc0d",
+        "window_digest": "a1a01f9253"
       }
     ]
   }

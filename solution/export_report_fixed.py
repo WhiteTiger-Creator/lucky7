@@ -601,9 +601,11 @@ def build_drift_windows(
                 if previous_end_ms is None
                 else max(window["start_ms"] - previous_end_ms, 0)
             )
-            carry_in_ms = max(previous_carry_out_ms - (idle_gap_ms // 2), 0)
+            # #DB-5360: both carry-chain divisors now ROUND UP — the idle-gap decay
+            # and the carry-in credit, final and revising the floors in #DB-5313/#DB-5346.
+            carry_in_ms = max(previous_carry_out_ms - (-(-idle_gap_ms // 2)), 0)
             ledger_adjusted_actionable_ms = (
-                window["actionable_duration_ms"] + (carry_in_ms // 4)
+                window["actionable_duration_ms"] + (-(-carry_in_ms // 4))
             )
             carry_out_ms = min(
                 carry_in_ms
@@ -705,7 +707,9 @@ def build_response_queue(
                 + window["defer_segment_count"]
             )
             ledger_pressure_score = (
-                (window["carry_out_ms"] // 80)
+                # #DB-5362: the carry-out half now ROUNDS UP too, so BOTH ledger halves
+                # ceil (the #DB-5314 worked example predates this and floors it).
+                (-(-window["carry_out_ms"] // 80))
                 # Carry-in term ROUNDS UP per #DB-5338. ceil(x/120)=-(-x//120).
                 + (-(-window["carry_in_ms"] // 120))
                 + max(window["alert_count"] - 1, 0)

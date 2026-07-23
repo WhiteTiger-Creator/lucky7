@@ -10,9 +10,13 @@ The initial rollout circulated compile-behavior proposals through #DB tickets in
 ## Governance Review Archive (2025-Q4 through 2026-Q2)
 Routine entries are context only. #DB-ticketed proposal and decision quotes embedded in the entries are the authoritative record for reconciler behavior.
 
-### Review entry 0002 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0002. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0001 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0001. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0003 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0003. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0004 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0004. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -22,9 +26,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0006. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0008 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0008. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0007 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0007. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0009 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0009. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0010 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0010. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -39,9 +47,13 @@ Shift lead logged a routine recovery observation for dmz (west) during review wi
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 > **Recovery draft proposal (2026-02-08 - #DB-4812)** Anders: alerts whose end_ms will not parse as an integer should be dropped from the export entirely *(Superseded — reversed in the 2026-05 governance review; see the matching decision entry.)*
 
-### Review entry 0015 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0015. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0014 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0014. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0016 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0016. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0017 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0017. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -51,9 +63,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0019. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0021 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0021. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0020 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0020. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0022 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0022. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0023 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0023. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -68,9 +84,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for lab (north) during review window 0026. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0028 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0028. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0027 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0027. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0029 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0029. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0030 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0030. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -80,9 +100,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0032. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0034 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0034. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0033 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0033. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0035 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0035. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0036 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0036. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -97,9 +121,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0039. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0041 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0041. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0040 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0040. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0042 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0042. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0043 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0043. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -109,9 +137,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0045. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0047 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0047. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0046 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0046. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0048 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0048. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0049 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0049. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -128,9 +160,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0052. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0054 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0054. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0053 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0053. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0055 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0055. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0056 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0056. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -139,6 +175,10 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 ### Review entry 0058 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0058. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0059 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0059. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0060 — core lane
 > **Governance decision (2026-03-10 - #DB-5209)** Rosa: dedupe keeps the first-seen row per alert_id in input order; end_ms and severity rank do not override that. *(Revised — see the 2026-05 governance review.)*
@@ -157,14 +197,14 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for vault (north) during review window 0062. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0063 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0063. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
-
 ### Review entry 0064 — prod lane
 > **Governance decision (2026-03-15 - #DB-5219)** Rosa: volatility_index is stability_pressure_score plus rotation_segment_count*2, with no probe-window terms. *(Revised — see the 2026-05 governance review.)*
 Shift lead logged a routine recovery observation for prod (east) during review window 0064. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0065 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0065. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0066 — lab lane
 > **Governance decision (2026-03-17 - #DB-5212)** Rosa: ledger_pressure_score is carry_out_ms // 100 only; carry_in and alert-count contributions are dropped. *(Revised — see the 2026-05 governance review.)*
@@ -213,9 +253,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for edge (central) during review window 0075. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0077 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0077. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0076 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0076. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0078 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0078. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0079 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0079. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -230,9 +274,9 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0082. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0084 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0084. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0083 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0083. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0085 — dmz lane
 > **Governance decision (2026-03-07 - #DB-5214)** Priya: risk_adjusted_duration_ms subtracts one third of the reopen overlap: max(effective_duration_ms - (reopen_overlap_ms // 3), 0). *(Revised — see the 2026-05 decision log.)*
@@ -243,6 +287,10 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 > **Recovery draft proposal (2026-02-27 - #DB-4842)** Rosa: trust_exposure_score is the count of reachable targets — one per reachable env, independent of path_score *(Superseded — reversed in the 2026-05 governance review; see the matching decision entry.)*
 
 > **Recovery draft proposal (2026-02-28 - #DB-4844)** Anders: stability_index sums volatility_index, defer_pressure_score and the full trust_exposure_score; there is no separate ledger-pressure term and the trust term is not halved *(Superseded — reversed in the 2026-05 governance review; see the matching decision entry.)*
+
+### Review entry 0086 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0086. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0087 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0087. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -259,9 +307,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for lab (north) during review window 0090. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0092 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0092. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0091 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0091. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0093 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0093. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0094 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0094. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -276,14 +328,18 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0097. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0099 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0099. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0098 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0098. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0100 — core lane
 > **Governance decision (2026-03-16 - #DB-5224)** Yusuf: risk carry decays by one third of the idle gap and caps at 1800: carry_in_ms = max(previous.carry_out_ms - (idle_gap_ms // 3), 0); carry_out_ms is capped at 1800. *(Revised — see the 2026-05 decision log.)*
 Shift lead logged a routine recovery observation for core (east) during review window 0100. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0101 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0101. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0102 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0102. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -298,9 +354,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for staging (west) during review window 0105. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0107 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0107. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0106 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0106. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0108 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0108. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0109 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0109. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -310,9 +370,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0111. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0113 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0113. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0112 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0112. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0114 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0114. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0115 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0115. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -327,9 +391,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0118. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0120 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0120. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0119 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0119. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0121 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0121. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0122 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0122. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -339,9 +407,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0124. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0126 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0126. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0125 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0125. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0127 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0127. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0128 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0128. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
@@ -351,9 +423,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0130. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0132 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0132. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0131 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0131. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0133 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0133. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0134 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0134. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -370,9 +446,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for staging (west) during review window 0137. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0139 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0139. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0138 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0138. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0140 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0140. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0141 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0141. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
@@ -382,9 +462,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0143. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0145 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0145. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0144 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0144. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0146 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0146. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0147 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0147. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -394,9 +478,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0149. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0151 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0151. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0150 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0150. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0152 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0152. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0153 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0153. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -406,6 +494,10 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0155. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
+### Review entry 0156 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0156. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
 ### Review entry 0157 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0157. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
@@ -413,9 +505,9 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 
 > **Governance decision (2026-05-17 - #DB-5348)** Lena: drift-window stitch threshold retuned (final, revising #DB-5304). Replication drift on a failed-over replica re-emerges in bursts a little further apart than the original 45 ms allowance assumed, so consecutive alerts were being split into separate windows that responders then had to re-merge by hand. The merge condition becomes `next.start_ms <= current.end_ms + 60`. The comparison stays inclusive, so a gap of exactly 60 ms merges and a gap of 61 ms does not. Everything else in #DB-5304 — grouping by normalized env, the exclusion of muted alerts from window construction — is unchanged.
 
-### Review entry 0158 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0158. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0159 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0159. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0160 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0160. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -425,9 +517,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0162. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0164 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0164. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0163 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0163. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0165 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0165. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0166 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0166. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -437,9 +533,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0168. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0170 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0170. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0169 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0169. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0171 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0171. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0172 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0172. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -449,9 +549,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0174. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0176 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0176. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0175 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0175. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0177 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0177. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0178 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0178. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
@@ -466,9 +570,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0181. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0183 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0183. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0182 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0182. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0184 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0184. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0185 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0185. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -478,9 +586,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0187. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0189 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0189. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0188 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0188. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0190 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0190. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0191 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0191. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
@@ -490,9 +602,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0193. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0195 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0195. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0194 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0194. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0196 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0196. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0197 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0197. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -507,9 +623,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for prod (east) during review window 0200. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0202 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0202. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0201 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0201. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0203 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0203. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0204 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0204. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -519,9 +639,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0206. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0208 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0208. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0207 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0207. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0209 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0209. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0210 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0210. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -531,9 +655,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0212. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0214 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0214. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0213 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0213. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0215 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0215. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0216 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0216. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -542,6 +670,10 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 ### Review entry 0218 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0218. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0219 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0219. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0220 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0220. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -552,9 +684,9 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 
 > **Governance decision (2026-05-25 - #DB-5358)** Nadia: trust contention (final). Each origin's `trust_exposure_score` is computed independently, so a target env reachable from several origins is currently counted by every one of them. A target reachable from MORE THAN ONE origin is charged to exactly ONE of them. For each such contended target, take the origins that reach it (its claimants) and pick the OWNER: the claimant whose strongest bounded simple-path score TO THAT TARGET is highest, ties broken by lexicographically smallest origin name. Note this is the per-target path score, NOT the origin's overall `trust_exposure_score` -- the two pick different owners. The owner adds that same per-target score to its own `trust_exposure_score`; every other claimant adds nothing for that target, and a target reachable from exactly one origin is not contended and adds nothing to anybody. The bonus is folded in BEFORE `trust_path_digest` is taken, so the digest commits to the attributed score. `trust_reachable_envs` and `trust_strongest_path` are unaffected: attribution changes what an origin SCORES, never what it reaches. Worked example: target t is reached by origins a (path score 9) and b (path score 4); a owns t and adds 9 to its own score, b adds 0, and t still appears in both origins' `trust_reachable_envs`.
 
-### Review entry 0221 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0221. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0222 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0222. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0223 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0223. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -564,9 +696,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0225. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0227 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0227. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0226 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0226. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0228 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0228. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0229 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0229. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -576,9 +712,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0231. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0233 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0233. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0232 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0232. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0234 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0234. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0235 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0235. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -588,9 +728,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0237. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0239 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0239. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0238 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0238. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0240 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0240. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0241 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0241. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
@@ -605,9 +749,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0244. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0246 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0246. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0245 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0245. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0247 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0247. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0248 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0248. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
@@ -617,9 +765,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0250. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0252 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0252. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0251 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0251. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0253 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0253. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0254 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0254. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -629,9 +781,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0256. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0258 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0258. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0257 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0257. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0259 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0259. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0260 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0260. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -646,9 +802,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for fabric (central) during review window 0263. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0265 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0265. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0264 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0264. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0266 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0266. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0267 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0267. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -658,9 +818,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0269. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0271 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0271. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0270 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0270. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0272 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0272. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0273 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0273. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -670,9 +834,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0275. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0277 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0277. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0276 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0276. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0278 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0278. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0279 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0279. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -682,6 +850,10 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0281. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
+### Review entry 0282 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0282. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
 ### Review entry 0283 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0283. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
@@ -689,9 +861,9 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 
 > **Governance decision (2026-05-17 - #DB-5346)** Yusuf: risk-ledger carry-out cap retuned (final, revising #DB-5313). The 2000 ms cap recorded there was set before the failover backlog was measured and never actually bound, which let a single long-running env accumulate carry without limit across a recovery shift. The cap is now 921 ms: `carry_out_ms = min(<computed carry>, 921)`. The cap is applied after the computed value, so a window whose computed carry is exactly 921 is unaffected and one above it is clamped down to 921. The `//2` idle decay, the carry-in formula and the ledger-adjusted credit recorded in #DB-5313 are unchanged.
 
-### Review entry 0284 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0284. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0285 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0285. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0286 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0286. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -701,9 +873,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0288. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0290 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0290. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0289 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0289. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0291 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0291. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0292 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0292. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -713,9 +889,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0294. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0296 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0296. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0295 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0295. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0297 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0297. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0298 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0298. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
@@ -725,9 +905,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0300. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0302 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0302. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0301 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0301. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0303 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0303. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0304 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0304. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -742,9 +926,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0307. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0309 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0309. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0308 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0308. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0310 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0310. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0311 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0311. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
@@ -754,9 +942,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0313. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0315 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0315. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0314 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0314. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0316 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0316. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0317 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0317. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -766,9 +958,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0319. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0321 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0321. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0320 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0320. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0322 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0322. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0323 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0323. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -783,9 +979,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for vault (north) during review window 0326. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0328 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0328. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0327 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0327. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0329 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0329. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0330 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0330. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -795,9 +995,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0332. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0334 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0334. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0333 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0333. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0335 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0335. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0336 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0336. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -807,9 +1011,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0338. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0340 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0340. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0339 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0339. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0341 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0341. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0342 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0342. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -819,14 +1027,18 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0344. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
+### Review entry 0345 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0345. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
 ### Review entry 0346 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0346. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 > **Governance decision (2026-05-07 - #DB-5317)** Lena: trust traversal: for each drift window, begin at its normalized env and enumerate simple directed paths of one, two, or three edges (the three-edge bound is final and revises #DB-5227); a simple path never repeats a node, so cycles are bounded and the origin cannot reappear Path score: sum canonical edge weights along the path. This supersedes #DB-4840.
 
-### Review entry 0347 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0347. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0348 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0348. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0349 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0349. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -836,9 +1048,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0351. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0353 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0353. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0352 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0352. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0354 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0354. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0355 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0355. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -848,9 +1064,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0357. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0359 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0359. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0358 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0358. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0360 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0360. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0361 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0361. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
@@ -860,9 +1080,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0363. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0365 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0365. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0364 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0364. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0366 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0366. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0367 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0367. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -877,9 +1101,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0370. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0372 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0372. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0371 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0371. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0373 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0373. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0374 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0374. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -889,9 +1117,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0376. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0378 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0378. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0377 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0377. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0379 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0379. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0380 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0380. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -901,9 +1133,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0382. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0384 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0384. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0383 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0383. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0385 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0385. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0386 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0386. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -918,9 +1154,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for dmz (west) during review window 0389. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0391 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0391. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0390 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0390. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0392 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0392. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0393 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0393. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -930,9 +1170,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for edge (central) during review window 0395. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0397 — dmz lane
-Shift lead logged a routine recovery observation for dmz (west) during review window 0397. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0396 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0396. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0398 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0398. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0399 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0399. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -942,9 +1186,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0401. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0403 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0403. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0402 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0402. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0404 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0404. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0405 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0405. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -953,6 +1201,10 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 ### Review entry 0407 — fabric lane
 Shift lead logged a routine recovery observation for fabric (central) during review window 0407. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0408 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0408. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0409 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0409. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -963,9 +1215,9 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 
 > **Governance decision (2026-05-18 - #DB-5352)** Priya: policy resolution, applied per normalized env in three layers. Start from the approved baseline of #DB-5350. Overlay every field the policy file's `default` object supplies — it may differ from the baseline and it need not be complete, so a field it omits keeps its baseline value. Then overlay every field that env's entry in `env_overrides` supplies. An override is never a complete policy: it names only the fields it changes and inherits the rest from the layer beneath it, so an env listing one field differs from the resolved default in that one field alone. An env with no entry in `env_overrides` resolves to the overlaid default. Coerce every policy value with the same millisecond coercion used elsewhere. `policy_checksum` is the SHA-256 hex digest of one line per resolved policy — first `default`, then each env named in `env_overrides` in ascending name order — each line being the env name followed by the thirteen field values in the order they are listed in #DB-5350, joined by `|`, lines joined by a single newline with no trailing newline, hashed over UTF-8.
 
-### Review entry 0410 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0410. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0411 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0411. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0412 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0412. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -975,9 +1227,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0414. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0416 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0416. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0415 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0415. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0417 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0417. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0418 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0418. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
@@ -987,9 +1243,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0420. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0422 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0422. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0421 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0421. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0423 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0423. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0424 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0424. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -999,9 +1259,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0426. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0428 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0428. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0427 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0427. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0429 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0429. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0430 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0430. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -1018,9 +1282,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for staging (west) during review window 0433. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0435 — edge lane
-Shift lead logged a routine recovery observation for edge (central) during review window 0435. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0434 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0434. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0436 — core lane
+Shift lead logged a routine recovery observation for core (east) during review window 0436. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0437 — dmz lane
 Shift lead logged a routine recovery observation for dmz (west) during review window 0437. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
@@ -1030,9 +1298,13 @@ Reviewers should reconcile behavior questions against #DB governance decisions r
 Shift lead logged a routine recovery observation for fabric (central) during review window 0439. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
 Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
-### Review entry 0441 — staging lane
-Shift lead logged a routine recovery observation for staging (west) during review window 0441. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
-Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+### Review entry 0440 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0440. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+
+### Review entry 0442 — lab lane
+Shift lead logged a routine recovery observation for lab (north) during review window 0442. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
 ### Review entry 0443 — edge lane
 Shift lead logged a routine recovery observation for edge (central) during review window 0443. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
@@ -1042,9 +1314,13 @@ Thread archived; see the #DB decision entries for anything affecting reconciler 
 Shift lead logged a routine recovery observation for dmz (west) during review window 0445. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
 Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
-### Review entry 0447 — fabric lane
-Shift lead logged a routine recovery observation for fabric (central) during review window 0447. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
-Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+### Review entry 0446 — vault lane
+Shift lead logged a routine recovery observation for vault (north) during review window 0446. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
+No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+
+### Review entry 0448 — prod lane
+Shift lead logged a routine recovery observation for prod (east) during review window 0448. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
 ### Review entry 0449 — staging lane
 Shift lead logged a routine recovery observation for staging (west) during review window 0449. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
@@ -1081,9 +1357,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0452. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0454 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0454. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0453 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0453. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0455 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0455. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0456 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0456. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
@@ -1093,9 +1373,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0458. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0460 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0460. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0459 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0459. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0461 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0461. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0462 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0462. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
@@ -1105,9 +1389,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0464. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0466 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0466. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0465 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0465. Rule-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0467 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0467. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0468 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0468. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
@@ -1117,9 +1405,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0470. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0472 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0472. Change-board reviewed stale exception approvals; owners pinged before the next recovery cycle.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0471 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0471. Dashboard tiles for drift volume lagged during rule refresh; attributed to cache staleness, not the reconciler.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0473 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0473. replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0474 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0474. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
@@ -1129,9 +1421,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0476. Noise review: repeated drift alerts traced to a flapping policy probe, muted at the source.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0478 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0478. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0477 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0477. Quarterly access recertification touched this lane; no compile-relevant configuration changed.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0479 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0479. Capacity review noted rising alert volume; thresholds unchanged outside the governance process.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0480 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0480. Replica checksum sync drill completed; drift alert acknowledgment stayed within the governance SLO.
@@ -1141,9 +1437,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0482. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0484 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0484. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0483 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0483. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0485 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0485. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0486 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0486. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1153,9 +1453,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0488. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0490 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0490. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0489 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0489. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0491 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0491. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0492 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0492. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1165,9 +1469,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0494. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0496 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0496. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0495 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0495. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0497 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0497. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0498 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0498. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1177,9 +1485,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0500. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0502 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0502. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0501 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0501. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0503 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0503. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0504 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0504. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1189,9 +1501,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0506. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0508 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0508. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0507 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0507. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0509 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0509. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0510 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0510. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1201,9 +1517,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0512. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0514 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0514. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0513 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0513. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0515 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0515. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0516 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0516. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1213,9 +1533,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0518. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0520 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0520. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0519 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0519. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0521 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0521. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0522 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0522. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1225,9 +1549,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0524. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0526 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0526. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0525 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0525. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0527 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0527. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0528 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0528. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1237,9 +1565,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0530. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0532 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0532. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0531 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0531. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0533 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0533. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0534 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0534. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1249,9 +1581,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0536. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0538 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0538. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0537 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0537. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0539 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0539. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0540 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0540. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1261,9 +1597,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0542. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0544 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0544. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0543 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0543. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0545 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0545. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0546 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0546. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1273,9 +1613,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0548. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0550 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0550. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0549 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0549. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0551 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0551. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0552 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0552. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1285,9 +1629,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0554. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0556 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0556. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0555 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0555. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0557 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0557. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0558 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0558. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1297,9 +1645,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0560. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0562 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0562. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0561 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0561. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0563 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0563. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0564 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0564. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1309,9 +1661,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0566. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0568 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0568. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0567 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0567. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0569 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0569. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0570 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0570. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1321,9 +1677,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0572. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0574 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0574. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0573 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0573. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0575 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0575. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0576 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0576. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1333,9 +1693,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0578. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0580 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0580. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0579 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0579. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0581 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0581. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0582 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0582. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1345,9 +1709,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0584. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0586 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0586. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0585 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0585. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0587 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0587. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0588 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0588. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1357,9 +1725,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0590. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0592 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0592. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0591 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0591. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0593 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0593. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0594 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0594. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1369,9 +1741,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0596. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0598 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0598. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0597 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0597. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0599 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0599. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0600 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0600. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1381,9 +1757,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0602. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0604 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0604. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0603 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0603. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0605 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0605. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0606 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0606. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1393,9 +1773,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0608. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0610 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0610. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0609 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0609. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0611 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0611. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0612 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0612. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1405,9 +1789,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0614. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0616 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0616. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0615 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0615. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0617 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0617. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0618 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0618. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1417,9 +1805,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0620. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0622 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0622. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0621 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0621. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0623 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0623. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0624 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0624. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1429,9 +1821,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0626. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0628 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0628. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0627 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0627. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0629 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0629. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0630 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0630. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1441,9 +1837,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0632. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0634 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0634. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0633 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0633. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0635 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0635. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0636 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0636. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1453,9 +1853,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0638. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0640 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0640. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0639 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0639. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0641 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0641. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0642 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0642. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1465,9 +1869,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0644. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0646 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0646. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0645 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0645. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0647 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0647. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0648 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0648. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1477,9 +1885,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0650. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0652 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0652. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0651 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0651. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0653 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0653. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0654 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0654. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1489,9 +1901,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0656. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0658 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0658. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0657 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0657. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0659 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0659. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0660 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0660. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1501,9 +1917,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0662. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0664 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0664. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0663 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0663. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0665 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0665. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0666 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0666. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1513,9 +1933,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0668. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0670 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0670. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0669 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0669. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0671 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0671. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0672 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0672. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1525,9 +1949,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0674. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0676 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0676. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0675 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0675. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0677 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0677. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0678 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0678. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1537,9 +1965,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0680. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0682 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0682. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0681 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0681. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0683 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0683. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0684 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0684. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1549,9 +1981,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0686. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0688 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0688. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0687 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0687. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0689 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0689. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0690 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0690. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1561,9 +1997,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0692. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0694 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0694. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0693 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0693. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0695 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0695. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0696 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0696. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1573,9 +2013,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0698. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0700 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0700. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0699 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0699. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0701 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0701. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0702 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0702. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1585,9 +2029,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0704. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0706 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0706. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0705 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0705. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0707 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0707. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0708 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0708. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1597,9 +2045,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0710. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0712 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0712. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0711 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0711. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0713 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0713. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0714 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0714. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1609,9 +2061,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0716. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0718 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0718. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0717 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0717. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0719 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0719. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0720 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0720. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1621,9 +2077,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0722. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0724 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0724. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0723 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0723. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0725 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0725. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0726 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0726. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1633,9 +2093,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0728. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0730 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0730. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0729 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0729. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0731 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0731. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0732 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0732. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1645,9 +2109,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0734. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0736 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0736. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0735 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0735. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0737 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0737. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0738 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0738. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1657,9 +2125,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0740. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0742 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0742. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0741 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0741. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0743 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0743. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0744 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0744. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1669,9 +2141,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0746. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0748 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0748. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0747 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0747. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0749 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0749. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0750 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0750. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1681,9 +2157,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0752. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0754 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0754. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0753 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0753. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0755 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0755. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0756 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0756. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1693,9 +2173,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0758. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0760 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0760. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0759 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0759. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0761 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0761. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0762 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0762. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1705,9 +2189,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0764. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0766 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0766. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0765 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0765. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0767 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0767. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0768 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0768. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1717,9 +2205,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0770. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0772 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0772. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0771 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0771. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0773 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0773. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0774 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0774. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1729,9 +2221,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0776. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0778 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0778. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0777 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0777. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0779 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0779. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0780 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0780. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1741,9 +2237,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0782. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0784 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0784. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0783 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0783. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0785 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0785. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0786 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0786. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1753,9 +2253,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0788. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0790 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0790. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0789 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0789. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0791 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0791. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0792 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0792. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1765,9 +2269,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0794. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0796 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0796. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0795 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0795. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0797 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0797. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0798 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0798. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1777,9 +2285,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0800. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0802 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0802. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0801 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0801. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0803 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0803. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0804 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0804. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1789,9 +2301,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0806. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0808 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0808. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0807 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0807. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0809 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0809. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0810 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0810. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1801,9 +2317,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0812. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0814 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0814. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0813 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0813. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0815 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0815. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0816 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0816. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1813,9 +2333,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0818. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0820 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0820. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0819 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0819. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0821 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0821. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0822 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0822. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1825,9 +2349,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0824. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0826 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0826. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0825 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0825. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0827 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0827. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0828 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0828. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1837,9 +2365,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0830. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0832 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0832. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0831 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0831. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0833 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0833. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0834 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0834. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1849,9 +2381,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0836. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0838 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0838. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0837 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0837. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0839 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0839. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0840 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0840. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1861,9 +2397,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0842. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0844 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0844. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0843 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0843. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0845 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0845. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0846 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0846. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1873,9 +2413,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0848. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0850 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0850. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0849 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0849. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0851 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0851. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0852 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0852. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1885,9 +2429,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0854. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0856 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0856. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0855 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0855. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0857 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0857. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0858 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0858. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1897,9 +2445,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0860. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0862 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0862. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0861 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0861. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0863 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0863. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0864 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0864. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1909,9 +2461,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0866. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0868 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0868. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0867 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0867. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0869 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0869. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0870 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0870. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1921,9 +2477,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0872. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0874 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0874. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0873 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0873. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0875 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0875. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0876 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0876. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1933,9 +2493,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0878. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0880 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0880. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0879 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0879. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0881 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0881. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0882 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0882. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1945,9 +2509,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0884. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0886 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0886. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0885 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0885. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0887 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0887. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0888 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0888. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1957,9 +2525,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0890. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0892 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0892. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0891 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0891. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0893 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0893. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0894 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0894. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1969,9 +2541,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0896. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0898 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0898. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0897 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0897. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0899 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0899. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0900 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0900. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -1981,9 +2557,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0902. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0904 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0904. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0903 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0903. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0905 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0905. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0906 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0906. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -1993,9 +2573,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0908. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0910 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0910. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0909 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0909. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0911 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0911. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0912 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0912. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -2005,9 +2589,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0914. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0916 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0916. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0915 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0915. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0917 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0917. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0918 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0918. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -2017,9 +2605,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0920. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0922 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0922. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0921 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0921. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0923 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0923. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0924 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0924. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -2029,9 +2621,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for vault (north) during review window 0926. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0928 — prod lane
-Shift lead logged a routine recovery observation for prod (east) during review window 0928. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0927 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0927. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0929 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0929. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0930 — lab lane
 Shift lead logged a routine recovery observation for lab (north) during review window 0930. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -2041,9 +2637,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for core (east) during review window 0932. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0934 — vault lane
-Shift lead logged a routine recovery observation for vault (north) during review window 0934. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0933 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0933. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0935 — fabric lane
+Shift lead logged a routine recovery observation for fabric (central) during review window 0935. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0936 — prod lane
 Shift lead logged a routine recovery observation for prod (east) during review window 0936. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.
@@ -2053,9 +2653,13 @@ Historical CSV exports remain archived and non-authoritative for the JSON reconc
 Shift lead logged a routine recovery observation for lab (north) during review window 0938. Change-board reviewed stale replication-slot approvals; owners pinged before the next recovery cycle.
 No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
 
-### Review entry 0940 — core lane
-Shift lead logged a routine recovery observation for core (east) during review window 0940. Point-in-time-restore maintenance window observed; no recovery-relevant configuration changed in this lane.
-Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
+### Review entry 0939 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0939. Vendor ticket on replication-callback retries closed; delivery within contractual budget.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
+
+### Review entry 0941 — dmz lane
+Shift lead logged a routine recovery observation for dmz (west) during review window 0941. Noise review: repeated drift alerts traced to a flapping lag probe, muted at the source.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
 
 ### Review entry 0942 — vault lane
 Shift lead logged a routine recovery observation for vault (north) during review window 0942. Checkpoint cadence reviewed; delivery within the governance SLO for this region.
@@ -2065,9 +2669,13 @@ No reconciler semantics changed in this entry; parameters remain as approved by 
 Shift lead logged a routine recovery observation for prod (east) during review window 0944. Quarterly standby recertification touched this lane; no compile-relevant configuration changed.
 Historical CSV exports remain archived and non-authoritative for the JSON reconciler acceptance.
 
-### Review entry 0946 — lab lane
-Shift lead logged a routine recovery observation for lab (north) during review window 0946. Synthetic drift injection verified on-call alert delivery to the containment rotation for this region.
-No reconciler semantics changed in this entry; parameters remain as approved by the governance board.
+### Review entry 0945 — staging lane
+Shift lead logged a routine recovery observation for staging (west) during review window 0945. Replica topology edge audit sampled cross-account roles; no reconciler-relevant findings for this lane.
+Thread archived; see the #DB decision entries for anything affecting reconciler behavior.
+
+### Review entry 0947 — edge lane
+Shift lead logged a routine recovery observation for edge (central) during review window 0947. Resync backlog groomed with the platform team; queue depth within the approved envelope.
+Reviewers should reconcile behavior questions against #DB governance decisions rather than chat excerpts.
 
 ### Review entry 0948 — core lane
 Shift lead logged a routine recovery observation for core (east) during review window 0948. Backup-set rollback rehearsal ran clean; no changes to recovery parameters were approved.

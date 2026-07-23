@@ -260,7 +260,8 @@
       ],
       "rotation_layer": [
         "#DB-5308",
-        "#DB-5354"
+        "#DB-5354",
+        "#DB-5364"
       ],
       "defer_layer": [
         "#DB-5310"
@@ -311,7 +312,8 @@
         "#DB-5356"
       ],
       "layer_interaction": [
-        "#DB-5354"
+        "#DB-5354",
+        "#DB-5364"
       ]
     },
     "rounding_warning": "Rounding direction is not uniform across the pipeline and is not inferable from any neighbouring divisor, including between siblings in the same family. Each divisor's direction is fixed by its own entry above; #DB-5340 records the map.",

@@ -232,7 +232,7 @@
       "source_alert_ids",
       "max_severity"
     ],
-    "field_policy": "Each window row carries EXACTLY the required_fields keys \u2014 no extras and no omissions. Queue-level fields (ticket_id, priority, queue_hash, window_digest, stability_pressure_score, volatility_index, defer_pressure_score, ledger_pressure_score, stability_index) belong only to response_queue.jsonl rows. env is the top-level map key, not a row field."
+    "field_policy": "Each window row carries EXACTLY the required_fields keys \u2014 no extras and no omissions. Queue-level fields (ticket_id, priority, queue_hash, window_digest, stability_pressure_score, volatility_index, defer_pressure_score, ledger_pressure_score, stability_index) belong only to response_queue.jsonl rows. This field_policy scopes drift_windows.json only: here env is the top-level map key rather than a window-row field. It does NOT apply to response_queue.jsonl, whose rows DO carry env as a required field (see response_queue.required_fields) since the queue is a flat JSON-lines stream with no enclosing per-env map."
   },
   "semantics_source": {
     "notes": "This document is the output contract only: file paths, schemas, required fields, digest payloads and checksum serialization. It does NOT define how values are derived.",
@@ -278,7 +278,8 @@
         "#DB-5338",
         "#DB-5346",
         "#DB-5360",
-        "#DB-5362"
+        "#DB-5362",
+        "#DB-5366"
       ],
       "trust_graph": [
         "#DB-5316",

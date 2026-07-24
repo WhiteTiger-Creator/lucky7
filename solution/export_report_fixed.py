@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Reference fix for database replication-drift failover compiler."""
 
 from __future__ import annotations
@@ -316,8 +315,7 @@ def _max_disjoint_trust_packing(
 
     def pack(index: int, used: frozenset[str], total: int) -> None:
         nonlocal best_total
-        if total > best_total:
-            best_total = total
+        best_total = max(best_total, total)
         if index >= len(paths):
             return
         pack(index + 1, used, total)
@@ -395,7 +393,7 @@ def strongest_trust_exposure(
         for target in reachable
     ]
     path_digest = hashlib.sha256(
-        f"{origin}|{exposure_score}|{';'.join(path_rows)}".encode("utf-8")
+        f"{origin}|{exposure_score}|{';'.join(path_rows)}".encode()
     ).hexdigest()[:12]
     return {
         "trust_reachable_envs": reachable,
@@ -461,7 +459,7 @@ def build_drift_windows(
         claimants = [e for e in sorted(trust_base) if target in trust_base[e]["trust_reachable_envs"]]
         if len(claimants) < 2:
             continue
-        owner = sorted(claimants, key=lambda e: (-target_scores[e].get(target, 0), e))[0]
+        owner = sorted(claimants, key=lambda e: (-target_scores[e].get(target, 0), e))[0]  # noqa: FURB192
         contention_bonus[owner] = contention_bonus.get(owner, 0) + target_scores[owner][target]
         contended_targets.setdefault(owner, []).append(target)
     trust_by_env = {
@@ -620,11 +618,14 @@ def build_drift_windows(
             ledger_adjusted_actionable_ms = (
                 window["actionable_duration_ms"] + (-(-carry_in_ms // 4))
             )
+            # Carry-out backlog term revised to rounded-up post-attenuation overlaps
+            # per #DB-5366 final, superseding the flat segment-count weights recorded
+            # in #DB-5313. ceil(x/n) = -(-x // n).
             carry_out_ms = min(
                 carry_in_ms
                 + window["actionable_duration_ms"]
-                + (window["rotation_segment_count"] * 15)
-                + (window["defer_segment_count"] * 10),
+                + (-(-window["rotation_overlap_ms"] // 7))
+                + (-(-window["defer_overlap_ms"] // 9)),
                 env_policy["carry_out_cap"],
             )
             window["idle_gap_ms"] = idle_gap_ms
@@ -770,7 +771,7 @@ def build_response_queue(
                     f"{window['ledger_adjusted_actionable_ms']}|{stability_pressure_score}|"
                     f"{volatility_index}|{defer_pressure_score}|{ledger_pressure_score}|"
                     f"{window['trust_exposure_score']}|{window['trust_path_digest']}"
-                ).encode("utf-8")
+                ).encode()
             ).hexdigest()[:12]
             ticket_id = f"{env}:{window['start_ms']}-{window['end_ms']}"
             window_digest = hashlib.sha1(
@@ -779,7 +780,7 @@ def build_response_queue(
                     f"{window['ledger_adjusted_actionable_ms']}|{stability_index}|"
                     f"{defer_pressure_score}|{volatility_index}|{ledger_pressure_score}|"
                     f"{window['trust_exposure_score']}|{window['trust_path_digest']}"
-                ).encode("utf-8")
+                ).encode()
             ).hexdigest()[:10]
 
             queue.append(

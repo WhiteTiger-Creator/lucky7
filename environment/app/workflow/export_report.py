@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Compile replication drift windows into the responder report set."""
 
 from __future__ import annotations

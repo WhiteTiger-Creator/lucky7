@@ -685,7 +685,7 @@ def test_reopen_compaction_and_scope_are_used(tmp_path: Path):
         assert summary["total_reopen_overlap_ms"] == 150
         assert summary["total_reopen_segment_count"] == 2
         assert summary["reopen_compaction_checksum"] == hashlib.sha256(
-            "lab|all|150|240\nlab|p1|260|320".encode("utf-8")
+            b"lab|all|150|240\nlab|p1|260|320"
         ).hexdigest()
         assert [row["ticket_id"] for row in queue] == ["lab:500-800", "lab:100-400"]
     finally:
@@ -737,7 +737,7 @@ def test_rotation_compaction_and_scope_are_used(tmp_path: Path):
         assert summary["total_rotation_overlap_ms"] == 160
         assert summary["total_rotation_segment_count"] == 2
         assert summary["rotation_compaction_checksum"] == hashlib.sha256(
-            "lab|all|130|240\nlab|p1|260|310".encode("utf-8")
+            b"lab|all|130|240\nlab|p1|260|310"
         ).hexdigest()
         assert [row["ticket_id"] for row in queue] == ["lab:500-820", "lab:100-400"]
     finally:
@@ -789,7 +789,7 @@ def test_defer_compaction_and_scope_are_used(tmp_path: Path):
         assert summary["total_defer_overlap_ms"] == 210
         assert summary["total_defer_segment_count"] == 2
         assert summary["defer_compaction_checksum"] == hashlib.sha256(
-            "lab|all|110|250\nlab|p1|255|325".encode("utf-8")
+            b"lab|all|110|250\nlab|p1|255|325"
         ).hexdigest()
         assert [row["ticket_id"] for row in queue] == ["lab:500-860", "lab:100-420"]
     finally:
@@ -1178,9 +1178,9 @@ def test_db_5358_trust_contention_owner_is_by_per_target_score(primary_outputs):
         claimants = [e for e in envs if tgt in reach[e]]
         if len(claimants) < 2:
             continue
-        owner = sorted(claimants, key=lambda e: (-scores[e].get(tgt, 0), e))[0]
+        owner = sorted(claimants, key=lambda e: (-scores[e].get(tgt, 0), e))[0]  # noqa: FURB192
         by_target[owner] = by_target.get(owner, 0) + scores[owner][tgt]
-        alt = sorted(claimants, key=lambda e: (-emitted[e], e))[0]
+        alt = sorted(claimants, key=lambda e: (-emitted[e], e))[0]  # noqa: FURB192
         by_overall[alt] = by_overall.get(alt, 0) + scores[alt][tgt]
 
     assert by_target, "no contended target -- #DB-5358 is dormant"

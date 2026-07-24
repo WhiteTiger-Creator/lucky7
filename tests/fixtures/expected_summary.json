@@ -1,5 +1,5 @@
 {
-  "broken_pipeline_sha256": "120160c9d85ecdc2c7f100469548ffdc67b4812a026113e72d2f603c3097b9c8",
+  "broken_pipeline_sha256": "b034f22266d3c32a973ac6e417aba254d3fbe66d4cb5c8cab252b56ec5313c89",
   "broken_summary_sha256": "2f4cb66bf7248fd465a355054b52990ad8918cd793a356ea75366a8be2c931ac",
   "broken_queue_count": 21,
   "broken_queue_ticket_ids": [
@@ -52,7 +52,7 @@
       "total_defer_overlap_ms": 400,
       "total_defer_segment_count": 8,
       "total_actionable_duration_ms": 11069,
-      "total_ledger_adjusted_actionable_ms": 13181,
+      "total_ledger_adjusted_actionable_ms": 13163,
       "longest_window_ms": 692,
       "queued_window_count": 22,
       "muted_excluded_count": 2,
@@ -64,14 +64,14 @@
       "max_carry_out_ms": 921,
       "max_stability_index": 65,
       "canonical_alert_checksum": "53e280082b72e1b1b39f522e9818fd3ca992f74f5063cf73530a308deb848cfe",
-      "queue_hash_checksum": "d622cdbbb4c285439ebecd1e91b781939d410e7d732dff033b8e3eb6fa94d2a2",
+      "queue_hash_checksum": "025ad9dbcd3d9e48cfe333b9eb68680572232c1d42eb1c8b612ee04546ccf57e",
       "freeze_compaction_checksum": "e06e1970f58c9a43da1de75b3c77333ba6cbb18489b494246adc3815876e17e7",
       "reopen_compaction_checksum": "450020433d51e0381d49cb025e7524a02d63aabd6ffaef681b5364d2275340fa",
       "rotation_compaction_checksum": "c9c18569993abcc389e6b78b5b39605b6a76b610d0eb25e0dcfb1d9233027a4c",
       "defer_compaction_checksum": "a0b6e627b4996cb791b280442e560ac37669fef0fa4fcec82e8f04ac5351751e",
       "trust_edge_checksum": "9e21caca5a5a1ec1e5e26420bd0acd2cfc3037fc6738d97f5e6ac48042826f19",
-      "window_digest_checksum": "45b65a3c914c39557497c9eb385a20a63c5ebf0d2f96a8c4628ad70ae4d67087",
-      "ledger_checksum": "46ed26fda1abec09c057f15f62591e502d5db7027ba0afde04dc601980f14d20",
+      "window_digest_checksum": "fcc6302947725b36eda5c41c0518b71de93fa3bc487b020dcc620c3cd57ed9f7",
+      "ledger_checksum": "94e40f93c9397ed6a2a50ec6e785fc6a5af74078aff2790367bba7321948cde6",
       "trust_path_digest_checksum": "5f2896b3dd70bbc80d5dd7a08753c29457d144d189c599bae505dd71476e5b68",
       "policy_checksum": "2e3e37a9741a294b92436ecf20509c47a379787699a462d4dcb7c88d450ddeea"
     },
@@ -140,7 +140,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 400,
           "carry_in_ms": 400,
-          "carry_out_ms": 663,
+          "carry_out_ms": 659,
           "ledger_adjusted_actionable_ms": 353,
           "trust_reachable_envs": [
             "dns",
@@ -179,9 +179,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 193,
-          "carry_in_ms": 566,
-          "carry_out_ms": 806,
-          "ledger_adjusted_actionable_ms": 382,
+          "carry_in_ms": 562,
+          "carry_out_ms": 802,
+          "ledger_adjusted_actionable_ms": 381,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -219,9 +219,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 160,
-          "carry_in_ms": 726,
+          "carry_in_ms": 722,
           "carry_out_ms": 921,
-          "ledger_adjusted_actionable_ms": 414,
+          "ledger_adjusted_actionable_ms": 413,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -260,7 +260,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 615,
           "carry_in_ms": 613,
-          "carry_out_ms": 838,
+          "carry_out_ms": 830,
           "ledger_adjusted_actionable_ms": 354,
           "trust_reachable_envs": [
             "dns",
@@ -299,9 +299,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 630,
-          "carry_in_ms": 523,
-          "carry_out_ms": 698,
-          "ledger_adjusted_actionable_ms": 306,
+          "carry_in_ms": 515,
+          "carry_out_ms": 690,
+          "ledger_adjusted_actionable_ms": 304,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -342,7 +342,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 0,
           "carry_in_ms": 0,
-          "carry_out_ms": 313,
+          "carry_out_ms": 305,
           "ledger_adjusted_actionable_ms": 288,
           "trust_reachable_envs": [
             "dns",
@@ -384,9 +384,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 342,
-          "carry_in_ms": 142,
-          "carry_out_ms": 761,
-          "ledger_adjusted_actionable_ms": 655,
+          "carry_in_ms": 134,
+          "carry_out_ms": 753,
+          "ledger_adjusted_actionable_ms": 653,
           "trust_reachable_envs": [
             "dns",
             "edge",
@@ -425,9 +425,9 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 808,
-          "carry_in_ms": 357,
-          "carry_out_ms": 687,
-          "ledger_adjusted_actionable_ms": 420,
+          "carry_in_ms": 349,
+          "carry_out_ms": 679,
+          "ledger_adjusted_actionable_ms": 418,
           "trust_reachable_envs": [
             "dns",
             "edge",
@@ -466,9 +466,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 670,
-          "carry_in_ms": 352,
-          "carry_out_ms": 561,
-          "ledger_adjusted_actionable_ms": 297,
+          "carry_in_ms": 344,
+          "carry_out_ms": 553,
+          "ledger_adjusted_actionable_ms": 295,
           "trust_reachable_envs": [
             "dns",
             "edge",
@@ -659,7 +659,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 1109,
           "carry_in_ms": 0,
-          "carry_out_ms": 242,
+          "carry_out_ms": 238,
           "ledger_adjusted_actionable_ms": 232,
           "trust_reachable_envs": [
             "mesh",
@@ -739,7 +739,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 100,
           "carry_in_ms": 350,
-          "carry_out_ms": 742,
+          "carry_out_ms": 738,
           "ledger_adjusted_actionable_ms": 470,
           "trust_reachable_envs": [
             "dns",
@@ -778,9 +778,9 @@
           ],
           "max_severity": "p4",
           "idle_gap_ms": 364,
-          "carry_in_ms": 560,
-          "carry_out_ms": 800,
-          "ledger_adjusted_actionable_ms": 380,
+          "carry_in_ms": 556,
+          "carry_out_ms": 796,
+          "ledger_adjusted_actionable_ms": 379,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -818,9 +818,9 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 360,
-          "carry_in_ms": 620,
-          "carry_out_ms": 888,
-          "ledger_adjusted_actionable_ms": 408,
+          "carry_in_ms": 616,
+          "carry_out_ms": 882,
+          "ledger_adjusted_actionable_ms": 407,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -858,9 +858,9 @@
           ],
           "max_severity": "p2",
           "idle_gap_ms": 894,
-          "carry_in_ms": 441,
-          "carry_out_ms": 666,
-          "ledger_adjusted_actionable_ms": 311,
+          "carry_in_ms": 435,
+          "carry_out_ms": 652,
+          "ledger_adjusted_actionable_ms": 309,
           "trust_reachable_envs": [
             "dns",
             "mesh",
@@ -1105,7 +1105,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 460,
           "carry_in_ms": 238,
-          "carry_out_ms": 682,
+          "carry_out_ms": 666,
           "ledger_adjusted_actionable_ms": 479,
           "trust_reachable_envs": [
             "core",
@@ -1147,9 +1147,9 @@
           ],
           "max_severity": "p1",
           "idle_gap_ms": 1330,
-          "carry_in_ms": 17,
-          "carry_out_ms": 254,
-          "ledger_adjusted_actionable_ms": 227,
+          "carry_in_ms": 1,
+          "carry_out_ms": 236,
+          "ledger_adjusted_actionable_ms": 223,
           "trust_reachable_envs": [
             "core",
             "dmz",
@@ -1381,7 +1381,7 @@
           "max_severity": "p2",
           "idle_gap_ms": 0,
           "carry_in_ms": 0,
-          "carry_out_ms": 257,
+          "carry_out_ms": 255,
           "ledger_adjusted_actionable_ms": 242,
           "trust_reachable_envs": [
             "mesh"
@@ -1416,7 +1416,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 805,
           "carry_in_ms": 0,
-          "carry_out_ms": 277,
+          "carry_out_ms": 269,
           "ledger_adjusted_actionable_ms": 252,
           "trust_reachable_envs": [
             "mesh"
@@ -1485,9 +1485,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 619,
         "idle_gap_ms": 342,
-        "carry_in_ms": 142,
-        "carry_out_ms": 761,
-        "ledger_adjusted_actionable_ms": 655,
+        "carry_in_ms": 134,
+        "carry_out_ms": 753,
+        "ledger_adjusted_actionable_ms": 653,
         "trust_reachable_envs": [
           "dns",
           "edge",
@@ -1516,8 +1516,8 @@
         "ledger_pressure_score": 14,
         "stability_index": 37,
         "priority": "critical",
-        "queue_hash": "6139d72f49e1",
-        "window_digest": "cf7129b189"
+        "queue_hash": "c1d15a8a5c33",
+        "window_digest": "cda11b60da"
       },
       {
         "ticket_id": "core:2010733800000-2010733800600",
@@ -1683,7 +1683,7 @@
         "actionable_duration_ms": 419,
         "idle_gap_ms": 460,
         "carry_in_ms": 238,
-        "carry_out_ms": 682,
+        "carry_out_ms": 666,
         "ledger_adjusted_actionable_ms": 479,
         "trust_reachable_envs": [
           "core",
@@ -1714,7 +1714,7 @@
         "ledger_pressure_score": 12,
         "stability_index": 65,
         "priority": "critical",
-        "queue_hash": "d3d7882b7438",
+        "queue_hash": "f4bcebf5aee2",
         "window_digest": "dce1303c6d"
       },
       {
@@ -1737,7 +1737,7 @@
         "actionable_duration_ms": 382,
         "idle_gap_ms": 100,
         "carry_in_ms": 350,
-        "carry_out_ms": 742,
+        "carry_out_ms": 738,
         "ledger_adjusted_actionable_ms": 470,
         "trust_reachable_envs": [
           "dns",
@@ -1765,7 +1765,7 @@
         "ledger_pressure_score": 14,
         "stability_index": 28,
         "priority": "critical",
-        "queue_hash": "e111d95a06a9",
+        "queue_hash": "ac1ae080c946",
         "window_digest": "c5c5434a4c"
       },
       {
@@ -1889,9 +1889,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 330,
         "idle_gap_ms": 808,
-        "carry_in_ms": 357,
-        "carry_out_ms": 687,
-        "ledger_adjusted_actionable_ms": 420,
+        "carry_in_ms": 349,
+        "carry_out_ms": 679,
+        "ledger_adjusted_actionable_ms": 418,
         "trust_reachable_envs": [
           "dns",
           "edge",
@@ -1918,8 +1918,8 @@
         "ledger_pressure_score": 12,
         "stability_index": 31,
         "priority": "critical",
-        "queue_hash": "f34ceada6cdf",
-        "window_digest": "1bfd1c1aff"
+        "queue_hash": "90b80d1347ab",
+        "window_digest": "32b6aefe63"
       },
       {
         "ticket_id": "core:2010733801900-2010733802185",
@@ -1940,9 +1940,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 232,
         "idle_gap_ms": 160,
-        "carry_in_ms": 726,
+        "carry_in_ms": 722,
         "carry_out_ms": 921,
-        "ledger_adjusted_actionable_ms": 414,
+        "ledger_adjusted_actionable_ms": 413,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -1968,8 +1968,8 @@
         "ledger_pressure_score": 19,
         "stability_index": 34,
         "priority": "critical",
-        "queue_hash": "e29a0482cc3b",
-        "window_digest": "f6fc161064"
+        "queue_hash": "66b4678dfdb5",
+        "window_digest": "7e7c85af0d"
       },
       {
         "ticket_id": "edge:2010733402400-2010733402706",
@@ -1990,9 +1990,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 253,
         "idle_gap_ms": 360,
-        "carry_in_ms": 620,
-        "carry_out_ms": 888,
-        "ledger_adjusted_actionable_ms": 408,
+        "carry_in_ms": 616,
+        "carry_out_ms": 882,
+        "ledger_adjusted_actionable_ms": 407,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -2018,8 +2018,8 @@
         "ledger_pressure_score": 18,
         "stability_index": 34,
         "priority": "critical",
-        "queue_hash": "3c227a5aace1",
-        "window_digest": "d035c5acdb"
+        "queue_hash": "a1026dc917df",
+        "window_digest": "58a4319882"
       },
       {
         "ticket_id": "core:2010733802800-2010733803070",
@@ -2041,7 +2041,7 @@
         "actionable_duration_ms": 200,
         "idle_gap_ms": 615,
         "carry_in_ms": 613,
-        "carry_out_ms": 838,
+        "carry_out_ms": 830,
         "ledger_adjusted_actionable_ms": 354,
         "trust_reachable_envs": [
           "dns",
@@ -2068,7 +2068,7 @@
         "ledger_pressure_score": 17,
         "stability_index": 38,
         "priority": "critical",
-        "queue_hash": "e0ee755496a3",
+        "queue_hash": "d7538caf47d8",
         "window_digest": "57f9704340"
       },
       {
@@ -2090,9 +2090,9 @@
         "defer_segment_count": 0,
         "actionable_duration_ms": 209,
         "idle_gap_ms": 670,
-        "carry_in_ms": 352,
-        "carry_out_ms": 561,
-        "ledger_adjusted_actionable_ms": 297,
+        "carry_in_ms": 344,
+        "carry_out_ms": 553,
+        "ledger_adjusted_actionable_ms": 295,
         "trust_reachable_envs": [
           "dns",
           "edge",
@@ -2116,11 +2116,11 @@
         "stability_pressure_score": 0,
         "volatility_index": 0,
         "defer_pressure_score": 0,
-        "ledger_pressure_score": 11,
-        "stability_index": 30,
+        "ledger_pressure_score": 10,
+        "stability_index": 29,
         "priority": "critical",
-        "queue_hash": "b440dbc02e58",
-        "window_digest": "b6136ff441"
+        "queue_hash": "7e06dc4e138d",
+        "window_digest": "1f1321235d"
       },
       {
         "ticket_id": "prod:2010733002200-2010733002489",
@@ -2382,9 +2382,9 @@
         "defer_segment_count": 1,
         "actionable_duration_ms": 200,
         "idle_gap_ms": 894,
-        "carry_in_ms": 441,
-        "carry_out_ms": 666,
-        "ledger_adjusted_actionable_ms": 311,
+        "carry_in_ms": 435,
+        "carry_out_ms": 652,
+        "ledger_adjusted_actionable_ms": 309,
         "trust_reachable_envs": [
           "dns",
           "mesh",
@@ -2410,8 +2410,8 @@
         "ledger_pressure_score": 13,
         "stability_index": 30,
         "priority": "high",
-        "queue_hash": "d4d791b1eb1a",
-        "window_digest": "c862076e8e"
+        "queue_hash": "81a8698d9b94",
+        "window_digest": "78f3af6b50"
       },
       {
         "ticket_id": "mesh:2010734402400-2010734402676",
@@ -2478,7 +2478,7 @@
         "actionable_duration_ms": 252,
         "idle_gap_ms": 805,
         "carry_in_ms": 0,
-        "carry_out_ms": 277,
+        "carry_out_ms": 269,
         "ledger_adjusted_actionable_ms": 252,
         "trust_reachable_envs": [
           "mesh"
@@ -2500,7 +2500,7 @@
         "ledger_pressure_score": 4,
         "stability_index": 16,
         "priority": "medium",
-        "queue_hash": "89706d5fad2e",
+        "queue_hash": "149fdad87463",
         "window_digest": "af20430b38"
       },
       {
@@ -2523,7 +2523,7 @@
         "actionable_duration_ms": 242,
         "idle_gap_ms": 0,
         "carry_in_ms": 0,
-        "carry_out_ms": 257,
+        "carry_out_ms": 255,
         "ledger_adjusted_actionable_ms": 242,
         "trust_reachable_envs": [
           "mesh"
@@ -2545,7 +2545,7 @@
         "ledger_pressure_score": 4,
         "stability_index": 10,
         "priority": "medium",
-        "queue_hash": "478c7c4cc7bb",
+        "queue_hash": "01be5c793e3c",
         "window_digest": "71791bcb00"
       }
     ]
@@ -2588,14 +2588,14 @@
       "max_carry_out_ms": 500,
       "max_stability_index": 50,
       "canonical_alert_checksum": "466ceab8a7fe142e5f87f0d7ba34a1293f5817688a0c77db59c65fa642fb6a12",
-      "queue_hash_checksum": "7e643f5674ed9a9ed31ce303b2dd951e4897723f20c492129d76f582655a3114",
+      "queue_hash_checksum": "708252ba598e97a3b0e7ed224c4450fe9169406f35a73c5a0742dfc0155eac4a",
       "freeze_compaction_checksum": "e06e1970f58c9a43da1de75b3c77333ba6cbb18489b494246adc3815876e17e7",
       "reopen_compaction_checksum": "450020433d51e0381d49cb025e7524a02d63aabd6ffaef681b5364d2275340fa",
       "rotation_compaction_checksum": "c9c18569993abcc389e6b78b5b39605b6a76b610d0eb25e0dcfb1d9233027a4c",
       "defer_compaction_checksum": "a0b6e627b4996cb791b280442e560ac37669fef0fa4fcec82e8f04ac5351751e",
       "trust_edge_checksum": "9e21caca5a5a1ec1e5e26420bd0acd2cfc3037fc6738d97f5e6ac48042826f19",
       "window_digest_checksum": "37c7ba9fb4e48d81c6e5a34972983240ec629a65035a9b28848c0682a32488a4",
-      "ledger_checksum": "79018e023e4b2f1e3376a6ae3e9cd28e9f2de41b43d0603f6e7f74c96b607d86",
+      "ledger_checksum": "14ef27167daf213bb80c920a33db4257f49845661e9356bcee22a1f01dced88a",
       "trust_path_digest_checksum": "81f78111345fd864e5e09e451249c625d842ebee4eb0c84f7cb6fed86f9c52b3",
       "policy_checksum": "2e3e37a9741a294b92436ecf20509c47a379787699a462d4dcb7c88d450ddeea"
     },
@@ -2747,7 +2747,7 @@
           "max_severity": "p1",
           "idle_gap_ms": 0,
           "carry_in_ms": 0,
-          "carry_out_ms": 393,
+          "carry_out_ms": 376,
           "ledger_adjusted_actionable_ms": 353,
           "trust_reachable_envs": [
             "dns",
@@ -3073,7 +3073,7 @@
         "actionable_duration_ms": 353,
         "idle_gap_ms": 0,
         "carry_in_ms": 0,
-        "carry_out_ms": 393,
+        "carry_out_ms": 376,
         "ledger_adjusted_actionable_ms": 353,
         "trust_reachable_envs": [
           "dns",
@@ -3102,7 +3102,7 @@
         "ledger_pressure_score": 6,
         "stability_index": 37,
         "priority": "critical",
-        "queue_hash": "6fcb8c78fa69",
+        "queue_hash": "3b0fd0f2e901",
         "window_digest": "e0068bd731"
       },
       {

@@ -727,6 +727,10 @@ def build_response_queue(
                 # Carry-in term ROUNDS UP per #DB-5338. ceil(x/120)=-(-x//120).
                 + (-(-window["carry_in_ms"] // 120))
                 + max(window["alert_count"] - 1, 0)
+                # #DB-5368: trust-exposure amplifier, FLOORED. A window's attributed
+                # trust_exposure_score (after #DB-5358 contention) feeds its ledger
+                # pressure, so a slip in the node-disjoint packing corrupts this too.
+                + (window["trust_exposure_score"] // 11)
             )
             stability_index = (
                 volatility_index

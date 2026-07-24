@@ -83,5 +83,40 @@
     "source_env": "edge",
     "target_env": "ignored",
     "weight": 0
+  },
+  {
+    "source_env": "dmz",
+    "target_env": "app",
+    "weight": 5
+  },
+  {
+    "source_env": "core",
+    "target_env": "app",
+    "weight": 3
+  },
+  {
+    "source_env": "app",
+    "target_env": "zone",
+    "weight": 4
+  },
+  {
+    "source_env": "edge",
+    "target_env": "gw",
+    "weight": 5
+  },
+  {
+    "source_env": "mesh",
+    "target_env": "gw",
+    "weight": 3
+  },
+  {
+    "source_env": "gw",
+    "target_env": "zone",
+    "weight": 2
+  },
+  {
+    "source_env": "dns",
+    "target_env": "app",
+    "weight": 4
   }
 ]
